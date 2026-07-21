@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/dna/JSONStreamWriter/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>JSONStreamWriter - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "JSONStreamWriter";
+        var mkdocs_page_input_path = "api/dna/JSONStreamWriter.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/dna/JSONStreamWriter/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >arrayview</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/ArrayView/">ArrayView</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >dna</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">JSONStreamWriter</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#class-binarystreamreader">class BinaryStreamReader</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#defaultinstancecreatordnajsonstreamwriter">DefaultInstanceCreator&lt;dna::JSONStreamWriter&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_1">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#defaultinstancedestroyerdnajsonstreamwriter">DefaultInstanceDestroyer&lt;dna::JSONStreamWriter&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_1">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_1">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_2">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#class-jsonstreamreader">class JSONStreamReader</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_1">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_3">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#class-dnaapi-jsonstreamwriter-public-streamwriter">class DNAAPI JSONStreamWriter : public StreamWriter</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_2">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters-create">Parameters (create)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for">Watch out for</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#description">Description</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-type-pmafactorycreatednajsonstreamwriter">using type = pma::FactoryCreate&lt;dna::JSONStreamWriter&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_2">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_4">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >pma</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/TypeDefs/">TypeDefs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >tdm</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Mat/">Mat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Transforms/">Transforms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">dna</li>
+      <li class="breadcrumb-item active">JSONStreamWriter</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-dnajsonstreamwriter">API Reference — <code>dna/JSONStreamWriter</code></h1>
+<hr />
+<!-- ink:api name="BinaryStreamReader" module="dna/JSONStreamWriter" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="class-binarystreamreader"><code>class BinaryStreamReader</code></h2>
+<p>Forward-declared peer type used as a data source when copying binary DNA data into a <code>JSONStreamWriter</code> via <code>setFrom</code>.</p>
+<h3 id="when-to-use-this">When to use this</h3>
+<p>Pass a <code>BinaryStreamReader*</code> to <code>JSONStreamWriter::setFrom</code> when you need to convert an existing binary DNA stream into JSON output. <code>BinaryStreamReader</code> is defined in its own header — this forward declaration exists solely to enable the <code>setFrom</code> overload signature in <code>JSONStreamWriter.h</code>.</p>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li><code>JSONStreamWriter::setFrom(const BinaryStreamReader*)</code> — consumes this type as the copy source</li>
+<li><code>JSONStreamReader</code> — the JSON-format peer; use when copying from an existing JSON source instead</li>
+</ul>
+<!-- ink:api-end name="BinaryStreamReader" -->
+
+<!-- ink:api name="DefaultInstanceCreator" module="dna/JSONStreamWriter" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="defaultinstancecreatordnajsonstreamwriter"><code>DefaultInstanceCreator&lt;dna::JSONStreamWriter&gt;</code></h2>
+<p>PMA policy struct that wires <code>pma::FactoryCreate</code> as the default construction strategy for <code>dna::JSONStreamWriter</code>.</p>
+<h3 id="why-this-exists">Why this exists</h3>
+<p>The <code>pma</code> memory management layer uses a traits pattern to decouple object construction from the calling code. By specializing <code>DefaultInstanceCreator</code> for <code>JSONStreamWriter</code>, PMA utilities such as <code>ScopedPtr</code> automatically know to call <code>JSONStreamWriter::create(...)</code> rather than <code>new</code>. This keeps smart-pointer and container code generic without hard-coding factory calls at each use site.</p>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td><code>pma::FactoryCreate&lt;dna::JSONStreamWriter&gt;</code></td>
+<td>required — the creator strategy type consumed by PMA utilities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li><code>DefaultInstanceDestroyer&lt;dna::JSONStreamWriter&gt;</code> — the paired destruction policy; both must be set when using PMA smart pointers</li>
+<li><code>pma::FactoryCreate</code> — the underlying factory functor this trait aliases</li>
+<li><code>JSONStreamWriter::create</code> — the factory method invoked by <code>FactoryCreate</code></li>
+</ul>
+<!-- ink:api-end name="DefaultInstanceCreator" -->
+
+<!-- ink:api name="DefaultInstanceDestroyer" module="dna/JSONStreamWriter" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="defaultinstancedestroyerdnajsonstreamwriter"><code>DefaultInstanceDestroyer&lt;dna::JSONStreamWriter&gt;</code></h2>
+<p>PMA policy struct that wires <code>pma::FactoryDestroy</code> as the default destruction strategy for <code>dna::JSONStreamWriter</code>.</p>
+<h3 id="why-this-exists_1">Why this exists</h3>
+<p>Mirrors <code>DefaultInstanceCreator</code> on the destruction side. PMA smart pointers and container utilities look up <code>DefaultInstanceDestroyer&lt;T&gt;::type</code> to find the functor to call when releasing a <code>T</code>. Specializing this for <code>JSONStreamWriter</code> ensures that <code>ScopedPtr&lt;JSONStreamWriter&gt;</code> automatically calls <code>JSONStreamWriter::destroy(instance)</code> on scope exit, preventing leaks without hard-coding the factory call at each use site.</p>
+<h3 id="fields_1">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td><code>pma::FactoryDestroy&lt;dna::JSONStreamWriter&gt;</code></td>
+<td>required — the destroyer strategy type consumed by PMA utilities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_2">Relationships</h3>
+<ul>
+<li><code>DefaultInstanceCreator&lt;dna::JSONStreamWriter&gt;</code> — the paired construction policy</li>
+<li><code>pma::FactoryDestroy</code> — the underlying factory destructor this trait aliases</li>
+<li><code>JSONStreamWriter::destroy</code> — the factory method invoked by <code>FactoryDestroy</code></li>
+</ul>
+<!-- ink:api-end name="DefaultInstanceDestroyer" -->
+
+<!-- ink:api name="JSONStreamReader" module="dna/JSONStreamWriter" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="class-jsonstreamreader"><code>class JSONStreamReader</code></h2>
+<p>Forward-declared peer type used as a data source when copying JSON DNA data into a <code>JSONStreamWriter</code> via <code>setFrom</code>.</p>
+<h3 id="when-to-use-this_1">When to use this</h3>
+<p>Pass a <code>JSONStreamReader*</code> to <code>JSONStreamWriter::setFrom</code> when you need to re-serialize or transform an existing JSON DNA stream — for example, to filter to a specific <code>DataLayer</code> before writing. Use <code>BinaryStreamReader</code> instead when your source data is in binary format.</p>
+<h3 id="relationships_3">Relationships</h3>
+<ul>
+<li><code>JSONStreamWriter::setFrom(const JSONStreamReader*)</code> — consumes this type as the copy source</li>
+<li><code>BinaryStreamReader</code> — the binary-format peer; use when converting from binary DNA to JSON</li>
+</ul>
+<!-- ink:api-end name="JSONStreamReader" -->
+
+<!-- ink:api name="JSONStreamWriter" module="dna/JSONStreamWriter" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="class-dnaapi-jsonstreamwriter-public-streamwriter"><code>class DNAAPI JSONStreamWriter : public StreamWriter</code></h2>
+<p>Write DNA rig data to a stream in human-readable JSON format, with configurable indentation. Use this instead of <code>BinaryStreamWriter</code> when you need human-readable output for debugging, tooling interchange, or text-based diffing.</p>
+<h3 id="when-to-use-this_2">When to use this</h3>
+<p>Use <code>JSONStreamWriter</code> when you need to serialize DNA rig data to JSON — for example, to produce text output that can be inspected in an editor, diffed in version control, or consumed by JSON-based tooling. When output size and parse speed matter more than readability, use <code>BinaryStreamWriter</code> instead.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-cpp">// Create a stream to write into
+auto* stream = SomeBoundedIOStream::create();
+
+// Create a JSONStreamWriter with 2-space indentation
+auto* writer = dna::JSONStreamWriter::create(stream, 2u);
+
+// Populate from an existing binary reader
+writer-&gt;setFrom(binaryReader, dna::DataLayer::All,
+                dna::UnknownLayerPolicy::Preserve);
+
+// Write and release
+writer-&gt;write();
+dna::JSONStreamWriter::destroy(writer);
+</code></pre>
+<h3 id="parameters-create">Parameters (create)</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td><code>BoundedIOStream*</code></td>
+<td>required — target stream to write JSON output into</td>
+</tr>
+<tr>
+<td><code>indentWidth</code></td>
+<td><code>std::uint32_t</code></td>
+<td>optional — number of spaces per indentation level; defaults to <code>4</code></td>
+</tr>
+<tr>
+<td><code>memRes</code></td>
+<td><code>MemoryResource*</code></td>
+<td>optional — custom memory resource for allocations; defaults to the platform default allocator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns">Returns</h3>
+<p><code>JSONStreamWriter*</code> — caller-owned pointer. Must be released by calling <code>destroy(instance)</code>.</p>
+<h3 id="watch-out-for">Watch out for</h3>
+<ul>
+<li>You own the returned pointer. Forgetting to call <code>destroy</code> leaks memory. Pair every <code>create</code> call with a <code>destroy</code> call, or use a PMA smart pointer with the <code>DefaultInstanceDestroyer</code> policy.</li>
+<li>This class is conditionally compiled under <code>DNA_BUILD_WITH_JSON_SUPPORT</code>. Without that define the class is absent from the build.</li>
+</ul>
+<h3 id="description">Description</h3>
+<p><code>JSONStreamWriter</code> uses a factory pattern — construction via <code>create()</code>, destruction via <code>destroy()</code> — rather than direct <code>new</code>/<code>delete</code>, to keep allocations routed through the optional <code>MemoryResource</code>. The two <code>setFrom</code> overloads let you copy data from either a <code>BinaryStreamReader</code> or a <code>JSONStreamReader</code>, selecting which <code>DataLayer</code> to include and how to handle unknown layers via <code>UnknownLayerPolicy</code>.</p>
+<!-- ink:api-end name="JSONStreamWriter" -->
+
+<!-- ink:api name="type" module="dna/JSONStreamWriter" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="using-type-pmafactorycreatednajsonstreamwriter"><code>using type = pma::FactoryCreate&lt;dna::JSONStreamWriter&gt;</code></h2>
+<p>Member alias inside <code>DefaultInstanceCreator&lt;dna::JSONStreamWriter&gt;</code> that resolves to the concrete factory creator type.</p>
+<h3 id="why-this-exists_2">Why this exists</h3>
+<p>This <code>using type</code> alias is the conventional member name expected by PMA's traits system. PMA utilities look up <code>DefaultInstanceCreator&lt;T&gt;::type</code> to find the factory functor to invoke when constructing a <code>T</code>. This alias makes <code>JSONStreamWriter</code> compatible with those utilities without any additional boilerplate.</p>
+<h3 id="relationships_4">Relationships</h3>
+<ul>
+<li><code>DefaultInstanceCreator&lt;dna::JSONStreamWriter&gt;</code> — the struct that contains this alias</li>
+<li><code>pma::FactoryCreate&lt;dna::JSONStreamWriter&gt;</code> — the concrete type this resolves to</li>
+</ul>
+<!-- ink:api-end name="type" -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../JSONStreamReader/" class="btn btn-neutral float-left" title="JSONStreamReader"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Reader/" class="btn btn-neutral float-right" title="Reader">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../JSONStreamReader/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Reader/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

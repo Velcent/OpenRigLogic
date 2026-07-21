@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/arrayview/ArrayView/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>ArrayView - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ArrayView";
+        var mkdocs_page_input_path = "api/arrayview/ArrayView.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/arrayview/ArrayView/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >arrayview</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">ArrayView</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-class-arrayview">template&lt;typename T&gt; class ArrayView</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints">Constraints</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for">Watch out for</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#arrayviewtraitst">ArrayViewTraits&lt;T&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#const_pointer">const_pointer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_1">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_1">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#const_reference">const_reference</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_2">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_2">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#constarrayviewt">ConstArrayView&lt;T&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_1">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_3">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#difference_type">difference_type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_3">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_4">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iscompatiblet-u">IsCompatible&lt;T, U&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_2">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_4">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_5">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pointer">pointer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_5">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_6">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reference">reference</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_6">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_7">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#size_type">size_type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_7">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_8">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#value_type">value_type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_8">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_9">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >dna</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamWriter/">JSONStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >pma</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/TypeDefs/">TypeDefs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >tdm</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Mat/">Mat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Transforms/">Transforms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">arrayview</li>
+      <li class="breadcrumb-item active">ArrayView</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-arrayviewarrayview">API Reference — <code>arrayview/ArrayView</code></h1>
+<hr />
+<!-- ink:api name="ArrayView" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-class-arrayview"><code>template&lt;typename T&gt; class ArrayView</code></h2>
+<p>Hold a non-owning view over a contiguous sequence of <code>T</code> elements — a pointer plus count — without any allocation or deallocation.</p>
+<h3 id="when-to-use-this">When to use this</h3>
+<p>Reach for <code>ArrayView&lt;T&gt;</code> when you want to pass a slice of an array or a standard container to a function without copying the data and without tying the function to a specific container type. Use the <code>const</code>-qualified alias <code>ConstArrayView&lt;T&gt;</code> (equivalently <code>ArrayView&lt;const T&gt;</code>) when the callee should not modify the elements. Do not use <code>ArrayView</code> to store data across asynchronous boundaries or beyond the lifetime of the underlying container — it does not extend object lifetimes.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-cpp">#include &quot;arrayview/ArrayView.h&quot;
+#include &lt;vector&gt;
+
+std::vector&lt;float&gt; weights = {0.1f, 0.4f, 0.5f};
+
+// Construct from a container — no copy
+av::ArrayView&lt;float&gt; view{weights};
+
+// Construct from a raw pointer and count
+av::ArrayView&lt;float&gt; rawView{weights.data(), weights.size()};
+
+// Slice the last two elements
+av::ArrayView&lt;float&gt; tail = view.slice(1);  // {0.4f, 0.5f}
+
+// Read-only view — ConstArrayView is ArrayView&lt;const float&gt;
+av::ConstArrayView&lt;float&gt; readOnly{weights};
+
+// By-value comparison with the original container
+assert(view == weights);  // true
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src</code></td>
+<td><code>pointer</code> + <code>size_type</code></td>
+<td>Pointer to the first element and the number of elements in the sequence; required for the raw-pointer constructor.</td>
+</tr>
+<tr>
+<td><code>src</code> (container overload)</td>
+<td><code>U&amp;&amp;</code></td>
+<td>Any lvalue or rvalue container whose <code>value_type</code> is compatible and which is not an rvalue reference (lifetime safety guard).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns">Returns</h3>
+<p><code>ArrayView&lt;T&gt;</code> — a lightweight view (pointer + size) into an existing buffer. <code>slice()</code> returns a new <code>ArrayView&lt;T&gt;</code> backed by the same memory.</p>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li>Does not own memory — the caller is responsible for ensuring the underlying buffer outlives all <code>ArrayView</code> instances that reference it.</li>
+<li>The container constructor is disabled for rvalue containers (<code>!std::is_rvalue_reference&lt;U&amp;&amp;&gt;</code>) to prevent dangling views over temporaries.</li>
+<li><code>ConstArrayView&lt;T&gt;</code> (<code>ArrayView&lt;const T&gt;</code>) is constructible from <code>ArrayView&lt;T&gt;</code>, but the reverse is prohibited by <code>IsCompatible</code>.</li>
+</ul>
+<h3 id="watch-out-for">Watch out for</h3>
+<ul>
+<li>Constructing an <code>ArrayView</code> from a temporary container (<code>std::vector&lt;T&gt;{}</code>) is rejected at compile time via SFINAE, but constructing from a named local variable that goes out of scope before the view is used will compile silently and produce undefined behaviour at runtime.</li>
+<li><code>slice(from)</code> and <code>slice(from, count)</code> do not perform bounds checking in the source visible here — verify <code>from + count &lt;= size()</code> before calling to avoid out-of-bounds pointer arithmetic.</li>
+</ul>
+<!-- ink:api-end name="ArrayView" -->
+
+<!-- ink:api name="ArrayViewTraits" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="arrayviewtraitst"><code>ArrayViewTraits&lt;T&gt;</code></h2>
+<p>Traits policy struct that maps a raw element type <code>T</code> to the standard set of associated types used throughout <code>ArrayView</code>.</p>
+<h3 id="why-this-exists">Why this exists</h3>
+<p><code>ArrayView</code> needs a uniform set of member type aliases (<code>value_type</code>, <code>pointer</code>, <code>reference</code>, etc.) that behave correctly for both mutable and const elements — but the rules differ: <code>ArrayViewTraits&lt;const T&gt;</code> makes all references and pointers read-only while keeping <code>value_type</code> as <code>const T</code>. Centralising this in a traits struct separates the policy from <code>ArrayView</code>'s logic and allows the const specialisation to be maintained in one place without littering <code>ArrayView</code>'s class body with <code>std::conditional</code> noise.</p>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value_type</code></td>
+<td><code>T</code> / <code>const T</code></td>
+<td>The element type; <code>const T</code> in the <code>const</code> specialisation.</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td><code>T&amp;</code> / <code>const T&amp;</code></td>
+<td>Lvalue reference to an element.</td>
+</tr>
+<tr>
+<td><code>const_reference</code></td>
+<td><code>const T&amp;</code></td>
+<td>Const lvalue reference to an element.</td>
+</tr>
+<tr>
+<td><code>pointer</code></td>
+<td><code>T*</code> / <code>const T*</code></td>
+<td>Mutable or read-only pointer to an element.</td>
+</tr>
+<tr>
+<td><code>const_pointer</code></td>
+<td><code>const T*</code></td>
+<td>Read-only pointer to an element.</td>
+</tr>
+<tr>
+<td><code>size_type</code></td>
+<td><code>std::size_t</code></td>
+<td>Unsigned type for element counts and indices.</td>
+</tr>
+<tr>
+<td><code>difference_type</code></td>
+<td><code>std::ptrdiff_t</code></td>
+<td>Signed type for pointer differences and iterator distances.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li><code>ArrayView&lt;T&gt;</code> — consumes all <code>ArrayViewTraits&lt;T&gt;</code> members as its own <code>using</code> declarations</li>
+<li><code>ConstArrayView&lt;T&gt;</code> — alias for <code>ArrayView&lt;const T&gt;</code>, which resolves through <code>ArrayViewTraits&lt;const T&gt;</code></li>
+</ul>
+<!-- ink:api-end name="ArrayViewTraits" -->
+
+<!-- ink:api name="const_pointer" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="const_pointer"><code>const_pointer</code></h2>
+<p>Read-only pointer-to-element type, returned by the const overloads of <code>data()</code>, <code>cbegin()</code>, and <code>cend()</code>.</p>
+<h3 id="fields_1">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>const_pointer</code></td>
+<td><code>const T*</code></td>
+<td>Always a const pointer regardless of whether <code>T</code> is itself const.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>const_pointer</code>; <code>ArrayView&lt;T&gt;</code> re-exports it for const-qualified access methods</li>
+</ul>
+<!-- ink:api-end name="const_pointer" -->
+
+<!-- ink:api name="const_reference" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="const_reference"><code>const_reference</code></h2>
+<p>Read-only lvalue-reference type for a single element inside an <code>ArrayView</code>.</p>
+<h3 id="fields_2">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>const_reference</code></td>
+<td><code>const T&amp;</code></td>
+<td>Always a const reference regardless of whether <code>T</code> itself is <code>const</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_2">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>const_reference</code>; <code>ArrayView&lt;T&gt;</code> re-exports it for the const <code>operator[]</code> overload</li>
+</ul>
+<!-- ink:api-end name="const_reference" -->
+
+<!-- ink:api name="ConstArrayView" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="constarrayviewt"><code>ConstArrayView&lt;T&gt;</code></h2>
+<p>Read-only non-owning view over a contiguous sequence of <code>T</code> elements; a type alias for <code>ArrayView&lt;const T&gt;</code>.</p>
+<h3 id="why-this-exists_1">Why this exists</h3>
+<p>Providing a named alias for <code>ArrayView&lt;const T&gt;</code> gives callers an intent-communicating type at API boundaries: a function accepting <code>ConstArrayView&lt;float&gt;</code> signals clearly that it will not modify the elements. It also simplifies call sites — constructing <code>ConstArrayView&lt;float&gt;</code> from a <code>std::vector&lt;float&gt;</code> works without explicit template arguments because <code>IsCompatible&lt;const float, float&gt;</code> is satisfied.</p>
+<h3 id="relationships_3">Relationships</h3>
+<ul>
+<li><code>ArrayView&lt;T&gt;</code> — <code>ConstArrayView&lt;T&gt;</code> is exactly <code>ArrayView&lt;const T&gt;</code>; all <code>ArrayView</code> methods are available</li>
+<li><code>IsCompatible&lt;const T, T&gt;</code> — enables implicit construction from a mutable <code>ArrayView&lt;T&gt;</code></li>
+</ul>
+<!-- ink:api-end name="ConstArrayView" -->
+
+<!-- ink:api name="difference_type" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="difference_type"><code>difference_type</code></h2>
+<p>Signed integer type for pointer differences and iterator distance calculations in <code>ArrayView</code>.</p>
+<h3 id="fields_3">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>difference_type</code></td>
+<td><code>std::ptrdiff_t</code></td>
+<td>Platform-native signed difference type. Satisfies the <code>std::random_access_iterator</code> <code>difference_type</code> requirement.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_4">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>difference_type</code>; re-exported by <code>ArrayView&lt;T&gt;</code> to satisfy iterator concept requirements</li>
+</ul>
+<!-- ink:api-end name="difference_type" -->
+
+<!-- ink:api name="IsCompatible" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="iscompatiblet-u"><code>IsCompatible&lt;T, U&gt;</code></h2>
+<p>Compile-time predicate that gates cross-type <code>ArrayView</code> construction: true when <code>U</code> is the same underlying type as <code>T</code> and the const-correctness direction is valid.</p>
+<h3 id="why-this-exists_2">Why this exists</h3>
+<p>When constructing an <code>ArrayView&lt;T&gt;</code> from an <code>ArrayView&lt;U&gt;</code>, two conditions must hold: the element types must be the same ignoring cv-qualifiers, and the construction must not silently discard <code>const</code> (you can create <code>ArrayView&lt;const int&gt;</code> from <code>ArrayView&lt;int&gt;</code>, but not the reverse). <code>IsCompatible</code> encodes both rules as a single <code>bool</code> constant so that <code>std::enable_if</code> SFINAE guards on <code>ArrayView</code>'s constructors remain readable at a glance.</p>
+<h3 id="fields_4">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>static constexpr bool</code></td>
+<td><code>true</code> when <code>T</code> and <code>U</code> share the same non-cv type AND the construction does not discard const; <code>false</code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_5">Relationships</h3>
+<ul>
+<li><code>ArrayView&lt;T&gt;</code> — uses <code>IsCompatible&lt;T, U&gt;</code> in <code>std::enable_if</code> on all cross-type conversion constructors</li>
+</ul>
+<!-- ink:api-end name="IsCompatible" -->
+
+<!-- ink:api name="pointer" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pointer"><code>pointer</code></h2>
+<p>Pointer-to-element type for an <code>ArrayView</code>, used by <code>data()</code>, <code>begin()</code>, and <code>end()</code>.</p>
+<h3 id="fields_5">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pointer</code></td>
+<td><code>T*</code> (primary) / <code>const T*</code> (const specialisation)</td>
+<td>Mutable pointer in the primary template; read-only pointer when <code>T</code> is const-qualified.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_6">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>pointer</code>; <code>ArrayView&lt;T&gt;</code> re-exports it for <code>data()</code>, <code>begin()</code>, and <code>end()</code> return types</li>
+</ul>
+<!-- ink:api-end name="pointer" -->
+
+<!-- ink:api name="reference" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="reference"><code>reference</code></h2>
+<p>Lvalue-reference type for a single element inside an <code>ArrayView</code>.</p>
+<h3 id="fields_6">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reference</code></td>
+<td><code>T&amp;</code> (primary) / <code>const T&amp;</code> (const specialisation)</td>
+<td>Mutable reference in the primary template; read-only reference when <code>T</code> is const.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_7">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>reference</code>; <code>ArrayView&lt;T&gt;</code> re-exports it via <code>operator[]</code> return type</li>
+</ul>
+<!-- ink:api-end name="reference" -->
+
+<!-- ink:api name="size_type" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="size_type"><code>size_type</code></h2>
+<p>Unsigned integer type used for element counts and index arithmetic in <code>ArrayView</code>.</p>
+<h3 id="fields_7">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size_type</code></td>
+<td><code>std::size_t</code></td>
+<td>Platform-native unsigned size type. Matches <code>size_type</code> in standard containers so <code>ArrayView</code> is range-compatible.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_8">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>size_type</code>; <code>ArrayView&lt;T&gt;</code> uses it for <code>size()</code>, <code>slice()</code>, and <code>operator[]</code> parameters</li>
+</ul>
+<!-- ink:api-end name="size_type" -->
+
+<!-- ink:api name="value_type" module="arrayview/ArrayView" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="value_type"><code>value_type</code></h2>
+<p>The underlying element type of an <code>ArrayView&lt;T&gt;</code>, stripped of pointer or reference decoration.</p>
+<h3 id="fields_8">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value_type</code></td>
+<td><code>T</code> (primary) / <code>const T</code> (const specialisation)</td>
+<td>The bare element type. <code>const T</code> when <code>T</code> is a <code>const</code>-qualified type.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_9">Relationships</h3>
+<ul>
+<li><code>ArrayViewTraits&lt;T&gt;</code> — defines <code>value_type</code>; <code>ArrayView&lt;T&gt;</code> re-exports it</li>
+</ul>
+<!-- ink:api-end name="value_type" -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../StringView/" class="btn btn-neutral float-right" title="StringView">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../StringView/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

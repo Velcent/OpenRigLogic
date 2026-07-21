@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/tdm/Transforms/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Transforms - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Transforms";
+        var mkdocs_page_input_path = "api/tdm/Transforms.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/tdm/Transforms/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >arrayview</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/ArrayView/">ArrayView</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >dna</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamWriter/">JSONStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >pma</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/TypeDefs/">TypeDefs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >tdm</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Mat/">Mat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Transforms</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-mat3t-change_of_basisconst-coord_sys-src-const-coord_sys-dst">template&lt;typename T&gt; mat3&lt;T&gt; change_of_basis(const coord_sys&amp; src, const coord_sys&amp; dst)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints">Constraints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-vec3t-convert_directionconst-vec3t-dir-const-mat3t-c-bool-renormalize-true">template&lt;typename T&gt; vec3&lt;T&gt; convert_direction(const vec3&lt;T&gt;&amp; dir, const mat3&lt;T&gt;&amp; c, bool renormalize = true)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_1">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_1">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-vec3t-convert_positionconst-vec3t-pos-const-mat3t-c">template&lt;typename T&gt; vec3&lt;T&gt; convert_position(const vec3&lt;T&gt;&amp; pos, const mat3&lt;T&gt;&amp; c)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_2">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_2">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-rad3t-convert_rotationconst-rad3t-rotation-const-mat3t-c-rot_seq-src_seq-const-rot_sign-src_signs-rot_seq-dst_seq-const-rot_sign-dst_signs">template&lt;typename T&gt; rad3&lt;T&gt; convert_rotation(const rad3&lt;T&gt;&amp; rotation, const mat3&lt;T&gt;&amp; c, rot_seq src_seq, const rot_sign&amp; src_signs, rot_seq dst_seq, const rot_sign&amp; dst_signs)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_3">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_3">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_3">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for">Watch out for</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-vec3t-convert_scaleconst-vec3t-scale-const-mat3t-c">template&lt;typename T&gt; vec3&lt;T&gt; convert_scale(const vec3&lt;T&gt;&amp; scale, const mat3&lt;T&gt;&amp; c)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_4">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_4">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_4">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_4">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for_1">Watch out for</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-mat3t-euler2matconst-rad3t-euler-rot_seq-seq-rot_sign-signs">template&lt;typename T&gt; mat3&lt;T&gt; euler2mat(const rad3&lt;T&gt;&amp; euler, rot_seq seq, rot_sign signs)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_5">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_5">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_5">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_5">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-rot_seq-order-mat3t-euler_to_matconst-rad3t-euler-rot_sign-signs">template&lt;typename T, rot_seq order&gt; mat3&lt;T&gt; euler_to_mat(const rad3&lt;T&gt;&amp; euler, rot_sign signs)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_6">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_6">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_6">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_6">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-t-fastasint-value">template&lt;typename T&gt; T fastasin(T value)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_7">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_7">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_7">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_7">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for_2">Watch out for</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-rad3t-mat2eulerconst-mat3t-m-rot_seq-seq-rot_sign-signs">template&lt;typename T&gt; rad3&lt;T&gt; mat2euler(const mat3&lt;T&gt;&amp; m, rot_seq seq, rot_sign signs)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_8">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_8">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_8">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_8">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for_3">Watch out for</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mat_to_euler">mat_to_euler</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#watch-out-for_4">Watch out for</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rot_mat">rot_mat</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_1">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_1">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_1">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_1">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-mat4t-rotateconst-vec3t-axis-radt-angle-rot_dir-dir">template&lt;typename T&gt; mat4&lt;T&gt; rotate(const vec3&lt;T&gt;&amp; axis, rad&lt;T&gt; angle, rot_dir dir)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_9">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_9">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_9">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_9">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-mat3t-rotxradt-x-rot_dir-dir">template&lt;typename T&gt; mat3&lt;T&gt; rotx(rad&lt;T&gt; x, rot_dir dir)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_10">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_10">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_10">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_10">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-mat3t-rotyradt-y-rot_dir-dir">template&lt;typename T&gt; mat3&lt;T&gt; roty(rad&lt;T&gt; y, rot_dir dir)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_11">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_11">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_11">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_11">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatetypename-t-mat3t-rotzradt-z-rot_dir-dir">template&lt;typename T&gt; mat3&lt;T&gt; rotz(rad&lt;T&gt; z, rot_dir dir)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_12">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_12">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_12">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_12">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatedim_t-l-typename-t-matllt-scaleconst-veclt-factors">template&lt;dim_t L, typename T&gt; mat&lt;L,L,T&gt; scale(const vec&lt;L,T&gt;&amp; factors)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_13">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_13">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_13">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_13">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templatedim_t-l-typename-t-matl1l1t-translateconst-veclt-position">template&lt;dim_t L, typename T&gt; mat&lt;L+1,L+1,T&gt; translate(const vec&lt;L,T&gt;&amp; position)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_14">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_14">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_14">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_14">Returns</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">tdm</li>
+      <li class="breadcrumb-item active">Transforms</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-tdmtransforms">API Reference — <code>tdm/Transforms</code></h1>
+<hr />
+<!-- ink:api name="change_of_basis" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-mat3t-change_of_basisconst-coord_sys-src-const-coord_sys-dst"><code>template&lt;typename T&gt; mat3&lt;T&gt; change_of_basis(const coord_sys&amp; src, const coord_sys&amp; dst)</code></h2>
+<p>Compute the 3×3 change-of-basis matrix that re-expresses vectors from <code>src</code>'s frame into <code>dst</code>'s frame. Uses the row-vector convention: <code>v_dst = v_src * C</code>, where <code>C = B_src * B_dst^T</code>.</p>
+<h3 id="when-to-use-this">When to use this</h3>
+<p>Call this once when you need to convert many vectors between two fixed coordinate systems — then pass the resulting matrix to <code>convert_position</code>, <code>convert_direction</code>, or <code>convert_scale</code> for each vector. This avoids recomputing the basis product on every vector. Use the <code>coord_sys</code> overloads of those conversion functions directly when converting only a few vectors; they call <code>change_of_basis</code> internally.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-cpp">// Pre-compute the reusable basis-change matrix
+tdm::mat3&lt;float&gt; C = tdm::change_of_basis(src_cs, dst_cs);
+
+// Reuse for many vectors
+for (const auto&amp; pos : joint_positions) {
+    tdm::vec3&lt;float&gt; converted = tdm::convert_position(pos, C);
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src</code></td>
+<td><code>coord_sys</code></td>
+<td>required — the source coordinate system</td>
+</tr>
+<tr>
+<td><code>dst</code></td>
+<td><code>coord_sys</code></td>
+<td>required — the destination coordinate system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns">Returns</h3>
+<p><code>mat3&lt;T&gt;</code> — the change-of-basis matrix <code>C</code> such that <code>v_dst = v_src * C</code>.</p>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li>Both <code>src</code> and <code>dst</code> must have orthonormal bases. The formula uses <code>B_dst^T</code> as <code>B_dst^{-1}</code>, which is only valid for orthonormal frames.</li>
+</ul>
+<!-- ink:api-end name="change_of_basis" -->
+
+<!-- ink:api name="convert_direction" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-vec3t-convert_directionconst-vec3t-dir-const-mat3t-c-bool-renormalize-true"><code>template&lt;typename T&gt; vec3&lt;T&gt; convert_direction(const vec3&lt;T&gt;&amp; dir, const mat3&lt;T&gt;&amp; c, bool renormalize = true)</code></h2>
+<p>Reorient a direction vector — such as a normal, tangent, or velocity — to a new coordinate frame. By default, re-normalizes the result to compensate for floating-point drift introduced by the basis-change multiplication.</p>
+<h3 id="when-to-use-this_1">When to use this</h3>
+<p>Use this for vectors that represent orientation rather than location: mesh normals, joint orient axes, velocity directions. For positions and translations, use <code>convert_position</code>. For scale vectors, use <code>convert_scale</code>. Pass <code>renormalize = false</code> only when you are certain the input is a unit vector and the basis change is exactly orthonormal — it saves one <code>sqrt</code> call per vector.</p>
+<h3 id="example_1">Example</h3>
+<pre><code class="language-cpp">// Convert a mesh normal from Maya (Y-up) to Unreal (Z-up) coordinate system
+tdm::mat3&lt;float&gt; C = tdm::change_of_basis(maya_cs, unreal_cs);
+tdm::vec3&lt;float&gt; unreal_normal = tdm::convert_direction(maya_normal, C);
+// Result is normalized
+
+// Skip renormalization when basis change is exact
+tdm::vec3&lt;float&gt; raw = tdm::convert_direction(maya_normal, C, false);
+</code></pre>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dir</code></td>
+<td><code>vec3&lt;T&gt;</code></td>
+<td>required — direction vector in the source coordinate system</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td><code>mat3&lt;T&gt;</code></td>
+<td>required (matrix overload) — precomputed change-of-basis matrix</td>
+</tr>
+<tr>
+<td><code>renormalize</code></td>
+<td><code>bool</code></td>
+<td>optional — re-normalize the result after transformation; default <code>true</code></td>
+</tr>
+<tr>
+<td><code>src_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — source coordinate system</td>
+</tr>
+<tr>
+<td><code>dst_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — destination coordinate system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_1">Returns</h3>
+<p><code>vec3&lt;T&gt;</code> — the direction vector expressed in the destination coordinate system, normalized if <code>renormalize == true</code>.</p>
+<!-- ink:api-end name="convert_direction" -->
+
+<!-- ink:api name="convert_position" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-vec3t-convert_positionconst-vec3t-pos-const-mat3t-c"><code>template&lt;typename T&gt; vec3&lt;T&gt; convert_position(const vec3&lt;T&gt;&amp; pos, const mat3&lt;T&gt;&amp; c)</code></h2>
+<p>Transform a position or translation vector into a new coordinate frame by multiplying by the change-of-basis matrix. Both overloads apply the same transformation — one accepts a precomputed matrix, the other computes it from <code>coord_sys</code> objects on the fly.</p>
+<h3 id="when-to-use-this_2">When to use this</h3>
+<p>Use this for joint positions and translation vectors — anything that has a location in space. For normals, tangents, or velocity directions, use <code>convert_direction</code> instead (it optionally re-normalizes and is semantically distinct). For scale vectors, use <code>convert_scale</code> which takes absolute values to strip sign flips.</p>
+<h3 id="example_2">Example</h3>
+<pre><code class="language-cpp">// Pre-computed matrix path (efficient for bulk conversion)
+tdm::mat3&lt;float&gt; C = tdm::change_of_basis(src_cs, dst_cs);
+tdm::vec3&lt;float&gt; dst_pos = tdm::convert_position(src_pos, C);
+
+// Inline path (single conversion)
+tdm::vec3&lt;float&gt; dst_pos2 = tdm::convert_position(src_pos, src_cs, dst_cs);
+</code></pre>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pos</code></td>
+<td><code>vec3&lt;T&gt;</code></td>
+<td>required — position or translation vector in the source coordinate system</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td><code>mat3&lt;T&gt;</code></td>
+<td>required (matrix overload) — precomputed change-of-basis matrix</td>
+</tr>
+<tr>
+<td><code>src_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — source coordinate system</td>
+</tr>
+<tr>
+<td><code>dst_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — destination coordinate system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_2">Returns</h3>
+<p><code>vec3&lt;T&gt;</code> — the position expressed in the destination coordinate system.</p>
+<!-- ink:api-end name="convert_position" -->
+
+<!-- ink:api name="convert_rotation" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-rad3t-convert_rotationconst-rad3t-rotation-const-mat3t-c-rot_seq-src_seq-const-rot_sign-src_signs-rot_seq-dst_seq-const-rot_sign-dst_signs"><code>template&lt;typename T&gt; rad3&lt;T&gt; convert_rotation(const rad3&lt;T&gt;&amp; rotation, const mat3&lt;T&gt;&amp; c, rot_seq src_seq, const rot_sign&amp; src_signs, rot_seq dst_seq, const rot_sign&amp; dst_signs)</code></h2>
+<p>Convert Euler rotation angles from one coordinate system and rotation convention to another. Builds the source rotation matrix from <code>src_seq</code> and <code>src_signs</code>, applies the basis change to re-express it in the destination frame, then extracts Euler angles using <code>dst_seq</code> and <code>dst_signs</code>.</p>
+<h3 id="when-to-use-this_3">When to use this</h3>
+<p>Use this when a joint's Euler angles need to be re-expressed for a different DCC tool or runtime that uses a different coordinate system, rotation order, or rotation direction convention. This is the full pipeline: Euler → matrix → basis change → matrix → Euler. If you only need to change rotation order within the same coordinate system, still use this function with the same <code>src_cs</code> and <code>dst_cs</code>.</p>
+<h3 id="example_3">Example</h3>
+<pre><code class="language-cpp">// Convert a Maya joint from XYZ/Y-up/right-handed to Unreal ZYX/Z-up conventions
+tdm::mat3&lt;float&gt; C = tdm::change_of_basis(maya_cs, unreal_cs);
+tdm::rot_sign maya_signs{tdm::rot_dir::positive, tdm::rot_dir::positive, tdm::rot_dir::positive};
+tdm::rot_sign unreal_signs{tdm::rot_dir::positive, tdm::rot_dir::negative, tdm::rot_dir::positive};
+tdm::rad3&lt;float&gt; unreal_rot = tdm::convert_rotation(
+    maya_euler, C,
+    tdm::rot_seq::xyz, maya_signs,
+    tdm::rot_seq::zyx, unreal_signs
+);
+</code></pre>
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rotation</code></td>
+<td><code>rad3&lt;T&gt;</code></td>
+<td>required — input Euler angles in the source convention</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td><code>mat3&lt;T&gt;</code></td>
+<td>required (matrix overload) — precomputed change-of-basis matrix</td>
+</tr>
+<tr>
+<td><code>src_seq</code></td>
+<td><code>rot_seq</code></td>
+<td>required — Euler ordering of the input angles</td>
+</tr>
+<tr>
+<td><code>src_signs</code></td>
+<td><code>rot_sign</code></td>
+<td>required — per-axis rotation direction of the input convention</td>
+</tr>
+<tr>
+<td><code>dst_seq</code></td>
+<td><code>rot_seq</code></td>
+<td>required — Euler ordering to extract for the output</td>
+</tr>
+<tr>
+<td><code>dst_signs</code></td>
+<td><code>rot_sign</code></td>
+<td>required — per-axis rotation direction of the output convention</td>
+</tr>
+<tr>
+<td><code>src_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — source coordinate system</td>
+</tr>
+<tr>
+<td><code>dst_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — destination coordinate system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_3">Returns</h3>
+<p><code>rad3&lt;T&gt;</code> — Euler angles in the destination rotation convention and coordinate frame.</p>
+<h3 id="watch-out-for">Watch out for</h3>
+<ul>
+<li>Mismatching <code>src_signs</code> with the actual convention used to build the animation data produces silently wrong output. Verify the rotation direction convention against the source DCC tool's documentation before passing signs.</li>
+<li>Near gimbal lock in either the source or destination decomposition, one extracted angle is forced to zero by convention. The result is a valid rotation but individual angle components lose their independent meaning.</li>
+</ul>
+<!-- ink:api-end name="convert_rotation" -->
+
+<!-- ink:api name="convert_scale" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-vec3t-convert_scaleconst-vec3t-scale-const-mat3t-c"><code>template&lt;typename T&gt; vec3&lt;T&gt; convert_scale(const vec3&lt;T&gt;&amp; scale, const mat3&lt;T&gt;&amp; c)</code></h2>
+<p>Transform a per-axis scale vector to a new coordinate frame, taking <code>fabs</code> of each component after the basis-change multiplication to strip sign flips — scale has no intrinsic direction, so negating an axis during the basis change should not invert the scale magnitude.</p>
+<h3 id="when-to-use-this_4">When to use this</h3>
+<p>Use this when a rig or mesh has per-axis scale values that must be re-expressed in a different coordinate system. The absolute-value step is intentional and distinguishes this from <code>convert_position</code> — do not use <code>convert_position</code> for scale vectors if you need the sign-stripping behavior.</p>
+<h3 id="example_4">Example</h3>
+<pre><code class="language-cpp">// Convert joint scale from Maya to Unreal coordinate conventions
+tdm::vec3&lt;float&gt; maya_scale{2.0f, 1.0f, 0.5f};
+tdm::mat3&lt;float&gt; C = tdm::change_of_basis(maya_cs, unreal_cs);
+tdm::vec3&lt;float&gt; unreal_scale = tdm::convert_scale(maya_scale, C);
+// All components are non-negative; sign flips from axis remapping are stripped
+</code></pre>
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td><code>vec3&lt;T&gt;</code></td>
+<td>required — per-axis scale vector in the source coordinate system</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td><code>mat3&lt;T&gt;</code></td>
+<td>required (matrix overload) — precomputed change-of-basis matrix</td>
+</tr>
+<tr>
+<td><code>src_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — source coordinate system</td>
+</tr>
+<tr>
+<td><code>dst_cs</code></td>
+<td><code>coord_sys</code></td>
+<td>required (coord_sys overload) — destination coordinate system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_4">Returns</h3>
+<p><code>vec3&lt;T&gt;</code> — the scale vector in the destination coordinate system, with all components non-negative.</p>
+<h3 id="watch-out-for_1">Watch out for</h3>
+<ul>
+<li>The <code>fabs</code> applied to results means negative scale inputs (mirror or flip scales) lose their sign during conversion. If your rig uses negative scale to represent reflections, handle the sign semantics manually rather than relying on this function.</li>
+</ul>
+<!-- ink:api-end name="convert_scale" -->
+
+<!-- ink:api name="euler2mat" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-mat3t-euler2matconst-rad3t-euler-rot_seq-seq-rot_sign-signs"><code>template&lt;typename T&gt; mat3&lt;T&gt; euler2mat(const rad3&lt;T&gt;&amp; euler, rot_seq seq, rot_sign signs)</code></h2>
+<p>Convert Euler angles to a 3×3 rotation matrix with runtime-selectable rotation ordering. Dispatches to the appropriate compile-time <code>euler_to_mat</code> specialization via a switch on <code>seq</code>.</p>
+<h3 id="when-to-use-this_5">When to use this</h3>
+<p>Use this when the rotation order is not known at compile time — for example, when reading joint rotation orders from a DNA asset that may vary per joint. If the rotation order is always fixed for every call, prefer <code>euler_to_mat</code> to avoid the switch overhead.</p>
+<h3 id="example_5">Example</h3>
+<pre><code class="language-cpp">// Joint has XYZ rotation order from DNA, right-handed convention
+tdm::rad3&lt;float&gt; euler{tdm::rad&lt;float&gt;{0.1f}, tdm::rad&lt;float&gt;{-0.3f}, tdm::rad&lt;float&gt;{0.05f}};
+tdm::rot_sign signs{tdm::rot_dir::positive, tdm::rot_dir::positive, tdm::rot_dir::positive};
+tdm::mat3&lt;float&gt; R = tdm::impl::euler2mat(euler, tdm::rot_seq::xyz, signs);
+// R is now the composed Rx * Ry * Rz rotation matrix
+</code></pre>
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>euler</code></td>
+<td><code>rad3&lt;T&gt;</code></td>
+<td>required — X, Y, Z Euler angles in radians</td>
+</tr>
+<tr>
+<td><code>seq</code></td>
+<td><code>rot_seq</code></td>
+<td>required — Euler rotation ordering (xyz, xzy, yxz, yzx, zxy, zyx)</td>
+</tr>
+<tr>
+<td><code>signs</code></td>
+<td><code>rot_sign</code></td>
+<td>required — per-axis rotation direction signs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_5">Returns</h3>
+<p><code>mat3&lt;T&gt;</code> — the composed 3×3 rotation matrix. Returns a zero-initialized matrix if <code>seq</code> does not match any known value.</p>
+<!-- ink:api-end name="euler2mat" -->
+
+<!-- ink:api name="euler_to_mat" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-rot_seq-order-mat3t-euler_to_matconst-rad3t-euler-rot_sign-signs"><code>template&lt;typename T, rot_seq order&gt; mat3&lt;T&gt; euler_to_mat(const rad3&lt;T&gt;&amp; euler, rot_sign signs)</code></h2>
+<p>Convert Euler angles to a 3×3 rotation matrix using a rotation ordering fixed at compile time. Per-axis signs from <code>rot_sign</code> negate the sine terms in each axis matrix before composition.</p>
+<h3 id="when-to-use-this_6">When to use this</h3>
+<p>Use this (<code>impl</code> namespace) when the Euler ordering is a compile-time constant and you want zero-overhead inlining — for example, in a tight per-joint loop where the rig's rotation order never changes at runtime. For runtime-selectable ordering, use <code>euler2mat</code> instead, which dispatches through a switch.</p>
+<h3 id="example_6">Example</h3>
+<pre><code class="language-cpp">// XYZ ordering, right-handed signs on all three axes
+tdm::rad3&lt;float&gt; euler{tdm::rad&lt;float&gt;{0.1f}, tdm::rad&lt;float&gt;{0.2f}, tdm::rad&lt;float&gt;{0.3f}};
+tdm::rot_sign signs{tdm::rot_dir::positive, tdm::rot_dir::positive, tdm::rot_dir::positive};
+tdm::mat3&lt;float&gt; R = tdm::impl::euler_to_mat&lt;float, tdm::rot_seq::xyz&gt;(euler, signs);
+</code></pre>
+<h3 id="parameters_6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>euler</code></td>
+<td><code>rad3&lt;T&gt;</code></td>
+<td>required — X, Y, Z Euler angles in radians</td>
+</tr>
+<tr>
+<td><code>signs</code></td>
+<td><code>rot_sign</code></td>
+<td>required — per-axis rotation direction; negates sine terms per axis when negative</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_6">Returns</h3>
+<p><code>mat3&lt;T&gt;</code> — a 3×3 rotation matrix representing the composed rotation.</p>
+<!-- ink:api-end name="euler_to_mat" -->
+
+<!-- ink:api name="fastasin" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-t-fastasint-value"><code>template&lt;typename T&gt; T fastasin(T value)</code></h2>
+<p>Compute arcsin using a 7-degree minimax polynomial approximation — faster than <code>std::asin</code> for bulk transform work. Input is silently clamped to <code>[-1, 1]</code> before evaluation.</p>
+<h3 id="when-to-use-this_7">When to use this</h3>
+<p>Reach for this when you need <code>asin</code> at high throughput — for example, inside per-frame Euler extraction loops — and can accept minimax approximation error (on the order of 1e-7). Use <code>std::asin</code> when you need the full IEEE 754 accuracy guarantee or are computing a safety-critical result.</p>
+<h3 id="example_7">Example</h3>
+<pre><code class="language-cpp">// Compute the pitch angle from a unit forward vector's Y component
+float fwd_y = -0.5f;
+float pitch = tdm::fastasin(fwd_y);  // faster than std::asin for bulk use
+</code></pre>
+<h3 id="parameters_7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>T</code> (floating-point)</td>
+<td>required — the sine value to invert; clamped to <code>[-1, 1]</code> internally</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_7">Returns</h3>
+<p><code>T</code> — the arcsin of <code>value</code> in radians, in the range <code>[-π/2, π/2]</code>.</p>
+<h3 id="watch-out-for_2">Watch out for</h3>
+<ul>
+<li>SFINAE-constrained to floating-point types only via <code>std::enable_if</code>. Passing an integer type produces a compile error, not a silent conversion.</li>
+<li>Input values outside <code>[-1, 1]</code> are clamped silently — no assertion or exception is raised.</li>
+</ul>
+<!-- ink:api-end name="fastasin" -->
+
+<!-- ink:api name="mat2euler" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-rad3t-mat2eulerconst-mat3t-m-rot_seq-seq-rot_sign-signs"><code>template&lt;typename T&gt; rad3&lt;T&gt; mat2euler(const mat3&lt;T&gt;&amp; m, rot_seq seq, rot_sign signs)</code></h2>
+<p>Extract Euler angles from a 3×3 rotation matrix with runtime-selectable ordering. The <code>rot_sign</code> parameter matches the direction convention used when the matrix was originally built — pass the same signs used in <code>euler2mat</code> to get consistent round-trip results.</p>
+<h3 id="when-to-use-this_8">When to use this</h3>
+<p>Use this to recover joint rotation angles from a composed rotation matrix — for example, after applying a coordinate-system change and needing to re-express the rotation in the destination rig's Euler convention. The <code>rot_sign</code> parameter is critical: mismatching it with the original build convention produces wrong angles without any error signal.</p>
+<h3 id="example_8">Example</h3>
+<pre><code class="language-cpp">// Round-trip: build matrix, then extract angles
+tdm::rad3&lt;float&gt; input{tdm::rad&lt;float&gt;{0.1f}, tdm::rad&lt;float&gt;{-0.3f}, tdm::rad&lt;float&gt;{0.05f}};
+tdm::rot_sign signs{tdm::rot_dir::positive, tdm::rot_dir::positive, tdm::rot_dir::positive};
+tdm::mat3&lt;float&gt; R = tdm::impl::euler2mat(input, tdm::rot_seq::xyz, signs);
+tdm::rad3&lt;float&gt; recovered = tdm::impl::mat2euler(R, tdm::rot_seq::xyz, signs);
+// recovered ≈ input (within floating-point precision, except near gimbal lock)
+</code></pre>
+<h3 id="parameters_8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>m</code></td>
+<td><code>mat3&lt;T&gt;</code></td>
+<td>required — a valid rotation matrix (orthonormal)</td>
+</tr>
+<tr>
+<td><code>seq</code></td>
+<td><code>rot_seq</code></td>
+<td>required — the Euler ordering used when <code>m</code> was built</td>
+</tr>
+<tr>
+<td><code>signs</code></td>
+<td><code>rot_sign</code></td>
+<td>required — per-axis rotation direction; must match the signs used in <code>euler2mat</code> for correct round-trip</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_8">Returns</h3>
+<p><code>rad3&lt;T&gt;</code> — the extracted X, Y, Z Euler angles in radians. Returns zero-initialized angles if <code>seq</code> is unrecognized.</p>
+<h3 id="watch-out-for_3">Watch out for</h3>
+<ul>
+<li>Passing <code>signs</code> that differ from those used to build the matrix produces incorrect angles with no error signal. Always use the same <code>rot_sign</code> for both <code>euler2mat</code> and <code>mat2euler</code>.</li>
+<li>Near gimbal lock, the decomposition sets one angle to zero by convention. Results are still a valid rotation but the individual angles lose their independent meaning.</li>
+</ul>
+<!-- ink:api-end name="mat2euler" -->
+
+<!-- ink:api name="mat_to_euler" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="mat_to_euler"><code>mat_to_euler</code></h2>
+<p>Policy struct that extracts Euler angles from a 3×3 rotation matrix, with the rotation ordering fixed at compile time. Each of the six specializations handles the normal case and both gimbal-lock degenerate cases.</p>
+<h3 id="why-this-exists">Why this exists</h3>
+<p>Euler extraction from a rotation matrix requires different trigonometric identities for each of the 6 orderings — the matrix elements that encode each angle change depending on the sequence. Encoding this as a policy struct allows <code>mat2euler</code> to dispatch at runtime without per-iteration branching while keeping each specialization inlinable. Each specialization also explicitly handles both gimbal-lock cases (the secondary angle hits ±90°), which a generic formula cannot do without knowing the rotation sequence.</p>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>operator()</code></td>
+<td><code>rad3&lt;T&gt;(const mat3&lt;T&gt;&amp; m, rot_sign signs)</code></td>
+<td>required — extracts Euler angles from <code>m</code> and scales result by <code>signs</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction">Construction</h3>
+<pre><code class="language-cpp">// Used internally via mat2euler dispatcher; direct use:
+tdm::mat3&lt;float&gt; R = /* rotation matrix from animation */;
+tdm::rot_sign signs{tdm::rot_dir::positive, tdm::rot_dir::positive, tdm::rot_dir::positive};
+tdm::rad3&lt;float&gt; euler = tdm::impl::mat_to_euler&lt;float, tdm::rot_seq::xyz&gt;()(R, signs);
+</code></pre>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li><code>mat2euler</code> — runtime dispatcher that selects the correct <code>mat_to_euler</code> specialization</li>
+<li><code>rot_mat</code> — the inverse policy: composes matrices from axis matrices</li>
+<li><code>euler_to_mat</code> — the forward direction: Euler angles → rotation matrix</li>
+</ul>
+<h3 id="watch-out-for_4">Watch out for</h3>
+<ul>
+<li>Gimbal lock is detected per-specialization using a single matrix element comparison. When lock is detected, one angle is set to zero and another absorbs the full rotation — this is mathematically correct but produces a discontinuity that can cause animation artifacts near the lock angle.</li>
+</ul>
+<!-- ink:api-end name="mat_to_euler" -->
+
+<!-- ink:api name="rot_mat" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="rot_mat"><code>rot_mat</code></h2>
+<p>Policy struct that composes three per-axis rotation matrices in the order dictated by the <code>rot_seq</code> template parameter — one full specialization per Euler ordering.</p>
+<h3 id="why-this-exists_1">Why this exists</h3>
+<p>Euler rotation order cannot be expressed as a runtime parameter when the composition is inlined — each ordering requires a distinct matrix multiplication sequence. <code>rot_mat</code> encodes that ordering as a compile-time policy, allowing <code>euler_to_mat</code> to be a zero-overhead template without a runtime switch. The six full specializations cover all intrinsic Euler orderings used by DCC tools and game engines.</p>
+<h3 id="fields_1">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>operator()</code></td>
+<td><code>mat3&lt;T&gt;(mat3&lt;T&gt; x, mat3&lt;T&gt; y, mat3&lt;T&gt; z)</code></td>
+<td>required — composes the three axis matrices in the order encoded by <code>order</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_1">Construction</h3>
+<pre><code class="language-cpp">// Used internally by euler_to_mat; direct instantiation:
+tdm::mat3&lt;float&gt; R = tdm::impl::rot_mat&lt;float, tdm::rot_seq::xyz&gt;()(Rx, Ry, Rz);
+// Returns Rx * Ry * Rz
+</code></pre>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li><code>euler_to_mat</code> — uses <code>rot_mat</code> to compose axis matrices at compile time</li>
+<li><code>euler2mat</code> — runtime dispatcher that selects the correct <code>rot_mat</code> specialization</li>
+<li><code>rot_seq</code> — the ordering enum that selects which specialization is instantiated</li>
+</ul>
+<!-- ink:api-end name="rot_mat" -->
+
+<!-- ink:api name="rotate" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-mat4t-rotateconst-vec3t-axis-radt-angle-rot_dir-dir"><code>template&lt;typename T&gt; mat4&lt;T&gt; rotate(const vec3&lt;T&gt;&amp; axis, rad&lt;T&gt; angle, rot_dir dir)</code></h2>
+<p>Build a 4×4 projective rotation matrix from an axis-angle or Euler angles, or accumulate rotation into an existing <code>mat4</code>. Four overloads cover axis-angle, component Euler, packed <code>rad3</code> Euler, and accumulating (post-multiply) variants.</p>
+<h3 id="when-to-use-this_9">When to use this</h3>
+<p>Use this (in <code>namespace tdm::projective</code>) when building homogeneous 4×4 transforms for a rendering pipeline or scene-graph composition. The axis-angle overload uses the Rodrigues formula and is appropriate for arbitrary-axis rotations. The Euler overloads embed a 3×3 from <code>euler2mat</code> into a 4×4 identity — use them when rotation order matters and you have joint angles from a rig.</p>
+<h3 id="example_9">Example</h3>
+<pre><code class="language-cpp">// Axis-angle: rotate 45° around world-up Y axis
+tdm::vec3&lt;float&gt; up{0.0f, 1.0f, 0.0f};
+tdm::mat4&lt;float&gt; R = tdm::rotate(up, tdm::rad&lt;float&gt;{0.7854f}, tdm::rot_dir::positive);
+
+// Euler XYZ, accumulate into an existing model matrix
+tdm::mat4&lt;float&gt; M = tdm::mat4&lt;float&gt;::identity();
+tdm::rot_sign signs{tdm::rot_dir::positive, tdm::rot_dir::positive, tdm::rot_dir::positive};
+M = tdm::rotate(M, tdm::rad&lt;float&gt;{0.1f}, tdm::rad&lt;float&gt;{0.2f}, tdm::rad&lt;float&gt;{0.0f},
+                tdm::rot_seq::xyz, signs);
+</code></pre>
+<h3 id="parameters_9">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>axis</code></td>
+<td><code>vec3&lt;T&gt;</code></td>
+<td>required (axis-angle overload) — rotation axis; normalized internally</td>
+</tr>
+<tr>
+<td><code>angle</code></td>
+<td><code>rad&lt;T&gt;</code></td>
+<td>required (axis-angle overload) — rotation magnitude in radians</td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td><code>rot_dir</code></td>
+<td>required (axis-angle overload) — rotation direction</td>
+</tr>
+<tr>
+<td><code>x</code>, <code>y</code>, <code>z</code></td>
+<td><code>rad&lt;T&gt;</code></td>
+<td>required (Euler overload) — per-axis angles</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td><code>rot_seq</code></td>
+<td>required (Euler overloads) — Euler composition ordering</td>
+</tr>
+<tr>
+<td><code>signs</code></td>
+<td><code>rot_sign</code></td>
+<td>required (Euler overloads) — per-axis rotation direction</td>
+</tr>
+<tr>
+<td><code>rotation</code></td>
+<td><code>rad3&lt;T&gt;</code></td>
+<td>required (packed Euler overload) — X, Y, Z angles</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td><code>mat4&lt;T&gt;</code></td>
+<td>optional — existing matrix; returns <code>m * rotate(...)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_9">Returns</h3>
+<p><code>mat4&lt;T&gt;</code> — a 4×4 rotation matrix with translation column zeroed, or <code>m</code> post-multiplied by the rotation.</p>
+<!-- ink:api-end name="rotate" -->
+
+<!-- ink:api name="rotx" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-mat3t-rotxradt-x-rot_dir-dir"><code>template&lt;typename T&gt; mat3&lt;T&gt; rotx(rad&lt;T&gt; x, rot_dir dir)</code></h2>
+<p>Build a 3×3 rotation matrix for a rotation about the X axis. The <code>rot_dir</code> parameter controls whether the rotation is right-handed or left-handed by negating the sine terms.</p>
+<h3 id="when-to-use-this_10">When to use this</h3>
+<p>This is an <code>impl</code>-namespace primitive used internally by <code>euler_to_mat</code> and <code>euler2mat</code>. In application code, prefer <code>euler2mat</code> or <code>projective::rotate</code> which compose the three axis matrices and handle rotation sequence ordering. Use <code>rotx</code> directly only when you need a single-axis rotation matrix for a custom composition.</p>
+<h3 id="example_10">Example</h3>
+<pre><code class="language-cpp">// 45-degree rotation about X, right-handed
+tdm::mat3&lt;float&gt; Rx = tdm::impl::rotx(tdm::rad&lt;float&gt;{0.7854f}, tdm::rot_dir::positive);
+</code></pre>
+<h3 id="parameters_10">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td><code>rad&lt;T&gt;</code></td>
+<td>required — rotation angle in radians</td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td><code>rot_dir</code></td>
+<td>required — rotation direction; negates sine terms when negative</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_10">Returns</h3>
+<p><code>mat3&lt;T&gt;</code> — a 3×3 rotation matrix about the X axis.</p>
+<!-- ink:api-end name="rotx" -->
+
+<!-- ink:api name="roty" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-mat3t-rotyradt-y-rot_dir-dir"><code>template&lt;typename T&gt; mat3&lt;T&gt; roty(rad&lt;T&gt; y, rot_dir dir)</code></h2>
+<p>Build a 3×3 rotation matrix for a rotation about the Y axis. The <code>rot_dir</code> parameter controls rotation direction by negating the sine terms.</p>
+<h3 id="when-to-use-this_11">When to use this</h3>
+<p>Implementation primitive in <code>namespace impl</code> — prefer <code>euler2mat</code> or <code>projective::rotate</code> in application code. Use directly only when composing a custom single-axis rotation about Y.</p>
+<h3 id="example_11">Example</h3>
+<pre><code class="language-cpp">// 30-degree rotation about Y, right-handed
+tdm::mat3&lt;float&gt; Ry = tdm::impl::roty(tdm::rad&lt;float&gt;{0.5236f}, tdm::rot_dir::positive);
+</code></pre>
+<h3 id="parameters_11">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>y</code></td>
+<td><code>rad&lt;T&gt;</code></td>
+<td>required — rotation angle in radians</td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td><code>rot_dir</code></td>
+<td>required — rotation direction; negates sine terms when negative</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_11">Returns</h3>
+<p><code>mat3&lt;T&gt;</code> — a 3×3 rotation matrix about the Y axis.</p>
+<!-- ink:api-end name="roty" -->
+
+<!-- ink:api name="rotz" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatetypename-t-mat3t-rotzradt-z-rot_dir-dir"><code>template&lt;typename T&gt; mat3&lt;T&gt; rotz(rad&lt;T&gt; z, rot_dir dir)</code></h2>
+<p>Build a 3×3 rotation matrix for a rotation about the Z axis. The <code>rot_dir</code> parameter controls rotation direction by negating the sine terms.</p>
+<h3 id="when-to-use-this_12">When to use this</h3>
+<p>Implementation primitive in <code>namespace impl</code> — prefer <code>euler2mat</code> or <code>projective::rotate</code> in application code. Use directly only when composing a custom single-axis rotation about Z.</p>
+<h3 id="example_12">Example</h3>
+<pre><code class="language-cpp">// 90-degree rotation about Z, right-handed
+tdm::mat3&lt;float&gt; Rz = tdm::impl::rotz(tdm::rad&lt;float&gt;{1.5708f}, tdm::rot_dir::positive);
+</code></pre>
+<h3 id="parameters_12">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>z</code></td>
+<td><code>rad&lt;T&gt;</code></td>
+<td>required — rotation angle in radians</td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td><code>rot_dir</code></td>
+<td>required — rotation direction; negates sine terms when negative</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_12">Returns</h3>
+<p><code>mat3&lt;T&gt;</code> — a 3×3 rotation matrix about the Z axis.</p>
+<!-- ink:api-end name="rotz" -->
+
+<!-- ink:api name="scale" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatedim_t-l-typename-t-matllt-scaleconst-veclt-factors"><code>template&lt;dim_t L, typename T&gt; mat&lt;L,L,T&gt; scale(const vec&lt;L,T&gt;&amp; factors)</code></h2>
+<p>Build a pure affine scale matrix from per-axis factors, or apply scale to an existing matrix. Four overloads cover vector factors, scalar uniform scale, and accumulating variants.</p>
+<h3 id="when-to-use-this_13">When to use this</h3>
+<p>Use this (in <code>namespace tdm::affine</code>) when working directly with square <code>mat&lt;L,L,T&gt;</code> — for example, when constructing a 3×3 scale before composing with a rotation matrix. For homogeneous 4×4 pipelines (rendering, projective transforms), use the <code>projective::scale</code> overload instead, which returns <code>mat&lt;L+1,L+1,T&gt;</code> with the homogeneous row preserved.</p>
+<h3 id="example_13">Example</h3>
+<pre><code class="language-cpp">// Non-uniform scale: stretch 2× along X, 0.5× along Y, 1× along Z
+tdm::vec3&lt;float&gt; factors{2.0f, 0.5f, 1.0f};
+tdm::mat3&lt;float&gt; S = tdm::affine::scale&lt;3, float&gt;(factors);
+
+// Uniform scale applied to an existing rotation matrix
+tdm::mat3&lt;float&gt; RS = tdm::affine::scale(R, 1.5f);
+</code></pre>
+<h3 id="parameters_13">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>factors</code></td>
+<td><code>vec&lt;L, T&gt;</code></td>
+<td>required — per-axis scale factors</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td><code>mat&lt;L,L,T&gt;</code></td>
+<td>optional — existing matrix to post-multiply; returns <code>m * scale(factors)</code></td>
+</tr>
+<tr>
+<td><code>factor</code></td>
+<td><code>T</code></td>
+<td>optional — uniform scalar scale applied to all L axes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_13">Returns</h3>
+<p><code>mat&lt;L,L,T&gt;</code> — a diagonal scale matrix, or the result of pre-multiplying <code>m</code> by the scale.</p>
+<!-- ink:api-end name="scale" -->
+
+<!-- ink:api name="translate" module="tdm/Transforms" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="templatedim_t-l-typename-t-matl1l1t-translateconst-veclt-position"><code>template&lt;dim_t L, typename T&gt; mat&lt;L+1,L+1,T&gt; translate(const vec&lt;L,T&gt;&amp; position)</code></h2>
+<p>Build a homogeneous translation matrix from a position vector. For a 3D vector, returns a 4×4 matrix with the translation in the last row (row-major convention). An accumulating overload computes <code>m * translate(position)</code>.</p>
+<h3 id="when-to-use-this_14">When to use this</h3>
+<p>Use this when constructing or composing affine transforms in homogeneous coordinates — for example, building a TRS (translate-rotate-scale) matrix for a rig joint. The translation is placed in row <code>L</code> (row-major convention), so compose as <code>T * R * S</code> or use the accumulating overload <code>translate(R_or_RS, position)</code> to keep the chain readable.</p>
+<h3 id="example_14">Example</h3>
+<pre><code class="language-cpp">// 3D translation: move 10 units along X
+tdm::vec3&lt;float&gt; offset{10.0f, 0.0f, 0.0f};
+tdm::mat4&lt;float&gt; T = tdm::translate(offset);  // 4×4 homogeneous translation
+
+// Accumulate: apply translation on top of an existing rotation matrix
+tdm::mat4&lt;float&gt; TR = tdm::translate(R, offset);  // R * translate(offset)
+</code></pre>
+<h3 id="parameters_14">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>position</code></td>
+<td><code>vec&lt;L,T&gt;</code></td>
+<td>required — translation vector; components placed into row <code>L</code> of an identity matrix</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td><code>mat&lt;L+1,L+1,T&gt;</code></td>
+<td>optional — existing matrix; returns <code>m * translate(position)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_14">Returns</h3>
+<p><code>mat&lt;L+1,L+1,T&gt;</code> — a homogeneous translation matrix, or <code>m</code> post-multiplied by the translation.</p>
+<!-- ink:api-end name="translate" -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Quat/" class="btn btn-neutral float-left" title="Quat"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Types/" class="btn btn-neutral float-right" title="Types">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Quat/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Types/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

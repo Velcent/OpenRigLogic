@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/pma/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Overview - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "api/pma/index.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/pma/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >arrayview</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../arrayview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../arrayview/ArrayView/">ArrayView</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../arrayview/StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >dna</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/JSONStreamWriter/">JSONStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dna/Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../dna/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >pma</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Overview</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#by-task">By Task</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#memory-management">Memory management</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#memory-resource-utilities">Memory resource utilities</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pointer-management">Pointer management</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#managed-instances">Managed instances</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#standard-container-aliases">Standard container aliases</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#instance-creation-destruction">Instance creation &amp; destruction</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#all-modules">All Modules</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="TypeDefs/">TypeDefs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >tdm</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Mat/">Mat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Transforms/">Transforms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tdm/Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">pma</li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-pma">API Reference — <code>pma</code></h1>
+<p><em>36 entries across 8 modules.</em></p>
+<h2 id="by-task">By Task</h2>
+<h3 id="memory-management">Memory management</h3>
+<p>Allocators and resource strategies for dynamic memory.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Module</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MemoryResource/">MemoryResource</a></td>
+<td>MemoryResource</td>
+<td>Abstract base class for memory allocation</td>
+</tr>
+<tr>
+<td><a href="PolyAllocator/">PolyAllocator</a></td>
+<td>PolyAllocator</td>
+<td>Polymorphic allocator wrapping MemoryResource</td>
+</tr>
+<tr>
+<td><a href="resources/DefaultMemoryResource/">DefaultMemoryResource</a></td>
+<td>DefaultMemoryResource</td>
+<td>Default system memory allocator</td>
+</tr>
+<tr>
+<td><a href="resources/AlignedMemoryResource/">AlignedMemoryResource</a></td>
+<td>AlignedMemoryResource</td>
+<td>Allocator with custom alignment support</td>
+</tr>
+<tr>
+<td><a href="resources/ArenaMemoryResource/">ArenaMemoryResource</a></td>
+<td>ArenaMemoryResource</td>
+<td>Arena-style allocator for bulk allocation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="memory-resource-utilities">Memory resource utilities</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Module</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PolyAllocator/">max_align_of</a></td>
+<td>PolyAllocator</td>
+<td>Maximum alignment value for types</td>
+</tr>
+<tr>
+<td><a href="PolyAllocator/">min_align_t</a></td>
+<td>PolyAllocator</td>
+<td>Minimum alignment type</td>
+</tr>
+<tr>
+<td><a href="PolyAllocator/">TDefaultMemoryResource</a></td>
+<td>PolyAllocator</td>
+<td>Template for default memory resource</td>
+</tr>
+<tr>
+<td><a href="PolyAllocator/">rebind</a></td>
+<td>PolyAllocator</td>
+<td>Rebind allocator to different type</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pointer-management">Pointer management</h3>
+<p>Safe pointer wrappers for ownership and lifetime management.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Module</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ScopedPtr/">ScopedPtr</a></td>
+<td>ScopedPtr</td>
+<td>Exclusive ownership smart pointer</td>
+</tr>
+<tr>
+<td><a href="ScopedPtr/">makeScoped</a></td>
+<td>ScopedPtr</td>
+<td>Factory function for scoped pointers</td>
+</tr>
+<tr>
+<td><a href="ScopedPtr/">New</a></td>
+<td>ScopedPtr</td>
+<td>Allocate and construct in one call</td>
+</tr>
+<tr>
+<td><a href="ScopedPtr/">Delete</a></td>
+<td>ScopedPtr</td>
+<td>Deallocate with custom destructor</td>
+</tr>
+<tr>
+<td><a href="ScopedPtr/">FactoryCreate</a></td>
+<td>ScopedPtr</td>
+<td>Create instances via factory</td>
+</tr>
+<tr>
+<td><a href="ScopedPtr/">FactoryDestroy</a></td>
+<td>ScopedPtr</td>
+<td>Destroy instances via factory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managed-instances">Managed instances</h3>
+<p>Instances with shared or unique lifetime management.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Module</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="utils/ManagedInstance/">ManagedInstance</a></td>
+<td>ManagedInstance</td>
+<td>Base for managed pointer instances</td>
+</tr>
+<tr>
+<td><a href="utils/ManagedInstance/">SharedInstance</a></td>
+<td>ManagedInstance</td>
+<td>Shared ownership instance wrapper</td>
+</tr>
+<tr>
+<td><a href="utils/ManagedInstance/">UniqueInstance</a></td>
+<td>ManagedInstance</td>
+<td>Unique ownership instance wrapper</td>
+</tr>
+<tr>
+<td><a href="utils/ManagedInstance/">MemoryResource</a></td>
+<td>ManagedInstance</td>
+<td>Associated memory resource</td>
+</tr>
+<tr>
+<td><a href="utils/ManagedInstance/">PointerType</a></td>
+<td>ManagedInstance</td>
+<td>Underlying pointer type</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard-container-aliases">Standard container aliases</h3>
+<p>Type aliases for STL containers.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Module</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="TypeDefs/">String</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::string</code></td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">Vector</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::vector</code></td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">Matrix</a></td>
+<td>TypeDefs</td>
+<td>Alias for 2D vector (vector of vectors)</td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">List</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::list</code></td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">Set</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::set</code></td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">UnorderedSet</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::unordered_set</code></td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">Map</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::map</code></td>
+</tr>
+<tr>
+<td><a href="TypeDefs/">UnorderedMap</a></td>
+<td>TypeDefs</td>
+<td>Alias for <code>std::unordered_map</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="instance-creation-destruction">Instance creation &amp; destruction</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Module</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ScopedPtr/">DefaultInstanceCreator</a></td>
+<td>ScopedPtr</td>
+<td>Creates default instances</td>
+</tr>
+<tr>
+<td><a href="ScopedPtr/">DefaultInstanceDestroyer</a></td>
+<td>ScopedPtr</td>
+<td>Destroys default instances</td>
+</tr>
+</tbody>
+</table>
+<h2 id="all-modules">All Modules</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>File</th>
+<th>Entries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AlignedMemoryResource</td>
+<td><a href="resources/AlignedMemoryResource/">resources/AlignedMemoryResource.md</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>ArenaMemoryResource</td>
+<td><a href="resources/ArenaMemoryResource/">resources/ArenaMemoryResource.md</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>DefaultMemoryResource</td>
+<td><a href="resources/DefaultMemoryResource/">resources/DefaultMemoryResource.md</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>ManagedInstance</td>
+<td><a href="utils/ManagedInstance/">utils/ManagedInstance.md</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>MemoryResource</td>
+<td><a href="MemoryResource/">MemoryResource.md</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>PolyAllocator</td>
+<td><a href="PolyAllocator/">PolyAllocator.md</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>ScopedPtr</td>
+<td><a href="ScopedPtr/">ScopedPtr.md</a></td>
+<td>8</td>
+</tr>
+<tr>
+<td>TypeDefs</td>
+<td><a href="TypeDefs/">TypeDefs.md</a></td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../dna/version/VersionInfo/" class="btn btn-neutral float-left" title="VersionInfo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="MemoryResource/" class="btn btn-neutral float-right" title="MemoryResource">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../dna/version/VersionInfo/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="MemoryResource/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

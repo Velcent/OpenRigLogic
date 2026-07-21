@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/dna/Configuration/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Configuration - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuration";
+        var mkdocs_page_input_path = "api/dna/Configuration.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/dna/Configuration/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >arrayview</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/ArrayView/">ArrayView</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >dna</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Configuration</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints">Constraints</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#coordinatesystem">CoordinateSystem</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_1">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_1">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#coordinatesystemtransformpolicy">CoordinateSystemTransformPolicy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_2">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_1">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_2">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#datalayer">DataLayer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_3">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_2">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_1">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_3">Relationships</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints_1">Constraints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#direction">Direction</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_4">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_4">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#facewindingorder">FaceWindingOrder</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_5">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_3">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints_2">Constraints</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_5">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rotationdirection">RotationDirection</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_6">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_6">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rotationsequence">RotationSequence</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_7">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_7">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rotationsign">RotationSign</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_8">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_2">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_8">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rotationunit">RotationUnit</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_4">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_9">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#translationunit">TranslationUnit</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_5">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_10">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unknownlayerpolicy">UnknownLayerPolicy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_9">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_6">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_11">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../JSONStreamWriter/">JSONStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >pma</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/TypeDefs/">TypeDefs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >tdm</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Mat/">Mat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Transforms/">Transforms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">dna</li>
+      <li class="breadcrumb-item active">Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-dnaconfiguration">API Reference — <code>dna/Configuration</code></h1>
+<hr />
+<!-- ink:api name="Configuration" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="configuration"><code>Configuration</code></h2>
+<p>Aggregate load-time options for a DNA reader — controls which layers load, which LODs are included, and how coordinates are converted.</p>
+<h3 id="why-this-exists">Why this exists</h3>
+<p>DNA assets can contain many optional data layers and multiple levels of detail. Without a configuration object, every call site would need to pass a growing list of independent parameters, and cross-field constraints (e.g., <code>lods</code> overrides <code>maxLOD</code>/<code>minLOD</code>) would be invisible. <code>Configuration</code> gathers all read-time options into one zero-argument-constructible struct whose defaults (load all layers, all LODs, preserve transforms) are safe for the common case. Pass a customised instance when you need partial loads or coordinate conversion.</p>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layer</code></td>
+<td><code>DataLayer</code></td>
+<td>optional — which data layers to load; defaults to <code>DataLayer::All</code></td>
+</tr>
+<tr>
+<td><code>unknownLayerPolicy</code></td>
+<td><code>UnknownLayerPolicy</code></td>
+<td>optional — whether to preserve or discard unrecognised layer data; defaults to <code>Preserve</code></td>
+</tr>
+<tr>
+<td><code>lods</code></td>
+<td><code>ConstArrayView&lt;uint16_t&gt;</code></td>
+<td>optional — explicit list of LOD indices to load; when non-empty, overrides <code>maxLOD</code>/<code>minLOD</code>; all values must be less than <code>getLODCount()</code></td>
+</tr>
+<tr>
+<td><code>maxLOD</code></td>
+<td><code>uint16_t</code></td>
+<td>optional — highest-detail LOD index to load (0 = most detailed); defaults to <code>0</code>; ignored when <code>lods</code> is non-empty; must be less than <code>getLODCount()</code></td>
+</tr>
+<tr>
+<td><code>minLOD</code></td>
+<td><code>uint16_t</code></td>
+<td>optional — lowest-detail LOD index to load; defaults to <code>UINT16_MAX</code> (load all); ignored when <code>lods</code> is non-empty; must be less than <code>getLODCount()</code></td>
+</tr>
+<tr>
+<td><code>coordinateSystemTransformPolicy</code></td>
+<td><code>CoordinateSystemTransformPolicy</code></td>
+<td>optional — whether to convert coordinates to <code>coordinateSystem</code> at load time; defaults to <code>Preserve</code></td>
+</tr>
+<tr>
+<td><code>coordinateSystem</code></td>
+<td><code>CoordinateSystem</code></td>
+<td>optional — target coordinate frame; only active when policy is <code>Transform</code></td>
+</tr>
+<tr>
+<td><code>rotationSequence</code></td>
+<td><code>RotationSequence</code></td>
+<td>optional — Euler rotation order applied globally during conversion; defaults to <code>xyz</code></td>
+</tr>
+<tr>
+<td><code>rotationSign</code></td>
+<td><code>RotationSign</code></td>
+<td>optional — per-axis rotation sign during conversion; defaults to all-positive</td>
+</tr>
+<tr>
+<td><code>faceWindingOrder</code></td>
+<td><code>FaceWindingOrder</code></td>
+<td>optional — target face winding; normalised to <code>ccw</code> during conversion; defaults to <code>ccw</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction">Construction</h3>
+<pre><code class="language-cpp">// Default: load everything, no coordinate conversion
+dna::Configuration cfg;
+
+// Load only descriptor and joint definition data for a preview
+dna::Configuration preview;
+preview.layer = dna::DataLayer::Definition;
+
+// Load specific LODs 0 and 2 only
+std::array&lt;std::uint16_t, 2&gt; lodList = {0, 2};
+dna::Configuration lodCfg;
+lodCfg.lods = dna::ConstArrayView&lt;std::uint16_t&gt;{lodList.data(), lodList.size()};
+
+// Load all layers, convert to a right-handed Y-up coordinate system
+dna::Configuration engineCfg;
+engineCfg.coordinateSystemTransformPolicy = dna::CoordinateSystemTransformPolicy::Transform;
+engineCfg.coordinateSystem = dna::CoordinateSystem{/* tdm::coord_sys for target engine */};
+</code></pre>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li>When <code>lods</code> is non-empty, the values set for <code>maxLOD</code> and <code>minLOD</code> are ignored entirely.</li>
+<li>All values in <code>lods</code> must be less than the value returned by <code>getLODCount()</code> on the reader; violation is undefined behaviour.</li>
+<li><code>maxLOD</code> and <code>minLOD</code> must each be less than <code>getLODCount()</code> when <code>lods</code> is empty.</li>
+<li>Coordinate conversion (rotation, winding, system) applies only when <code>coordinateSystemTransformPolicy == Transform</code>.</li>
+</ul>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li><code>DataLayer</code> — selects which data layers to load</li>
+<li><code>UnknownLayerPolicy</code> — controls handling of unrecognised layers</li>
+<li><code>CoordinateSystemTransformPolicy</code> / <code>CoordinateSystem</code> — coordinate conversion settings</li>
+<li><code>FaceWindingOrder</code> — face winding normalisation during conversion</li>
+</ul>
+<!-- ink:api-end name="Configuration" -->
+
+<!-- ink:api name="CoordinateSystem" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="coordinatesystem"><code>CoordinateSystem</code></h2>
+<p>Complete spatial coordinate frame type from TDM, aliased into the <code>dna</code> namespace.</p>
+<h3 id="why-this-exists_1">Why this exists</h3>
+<p><code>CoordinateSystem</code> is <code>tdm::coord_sys</code> re-exported under <code>dna::</code>. It encapsulates the full description of a spatial frame — axis directions, handedness, and up convention — as a typed object rather than a loose collection of booleans or an implicit enum. Using a typed coordinate frame prevents silent mismatches where a right-handed Y-up frame is accidentally interpreted as a left-handed Z-up frame. Set <code>Configuration::coordinateSystem</code> to the target frame, then set <code>coordinateSystemTransformPolicy = Transform</code> to activate conversion at load time.</p>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li><code>Direction</code> — axis direction values used to build a <code>CoordinateSystem</code></li>
+<li><code>Configuration</code> — the <code>coordinateSystem</code> field holds the target frame</li>
+<li><code>CoordinateSystemTransformPolicy</code> — must be <code>Transform</code> for the frame to be applied</li>
+</ul>
+<!-- ink:api-end name="CoordinateSystem" -->
+
+<!-- ink:api name="CoordinateSystemTransformPolicy" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="coordinatesystemtransformpolicy"><code>CoordinateSystemTransformPolicy</code></h2>
+<p>Decide whether the reader converts loaded data into a target coordinate system or passes it through unchanged.</p>
+<h3 id="why-this-exists_2">Why this exists</h3>
+<p>DNA assets are authored in a specific coordinate frame, but downstream engines (Unreal, Maya, custom renderers) may use different conventions. <code>Transform</code> enables in-place conversion at load time so the rest of the pipeline can assume a consistent frame. <code>Preserve</code> is the safe default for read-back fidelity — use it when the consuming code handles its own coordinate transforms, or when round-tripping a file back to disk without modification.</p>
+<h3 id="fields_1">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Preserve</code></td>
+<td>Pass coordinate data through without any conversion. Default.</td>
+</tr>
+<tr>
+<td><code>Transform</code></td>
+<td>Convert to the coordinate system specified in <code>Configuration::coordinateSystem</code> at load time, unless the data is already in that system.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_2">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — set via <code>coordinateSystemTransformPolicy</code>; works with <code>coordinateSystem</code>, <code>rotationSequence</code>, <code>rotationSign</code>, and <code>faceWindingOrder</code> fields</li>
+<li><code>CoordinateSystem</code> — the target frame used when policy is <code>Transform</code></li>
+<li><code>FaceWindingOrder</code> — face winding is normalised to <code>ccw</code> when policy is <code>Transform</code></li>
+</ul>
+<!-- ink:api-end name="CoordinateSystemTransformPolicy" -->
+
+<!-- ink:api name="DataLayer" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="datalayer"><code>DataLayer</code></h2>
+<p>Select which data layers to load from a DNA asset — pay only for the data your pipeline needs.</p>
+<h3 id="why-this-exists_3">Why this exists</h3>
+<p>Loading an entire DNA asset when only descriptor or joint data is needed wastes memory and I/O time. <code>DataLayer</code> is a bitmask enum that lets callers request exactly the layers they need, while encoding implicit load-order dependencies directly in the enumerator values — <code>Behavior = 4 | Definition</code> makes it self-evident that loading behaviour also loads definition. The <code>operator|</code> overload lets you compose custom subsets without casting.</p>
+<h3 id="fields_2">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Descriptor</code></td>
+<td><code>uint32_t = 1</code></td>
+<td>optional — base identity and metadata only; no joint or geometry data</td>
+</tr>
+<tr>
+<td><code>Definition</code></td>
+<td><code>uint32_t = 2 \| Descriptor</code></td>
+<td>optional — joint definitions; implicitly loads <code>Descriptor</code></td>
+</tr>
+<tr>
+<td><code>Behavior</code></td>
+<td><code>uint32_t = 4 \| Definition</code></td>
+<td>optional — joint behaviour data; implicitly loads <code>Definition</code></td>
+</tr>
+<tr>
+<td><code>Geometry</code></td>
+<td><code>uint32_t = 8 \| Definition</code></td>
+<td>optional — full mesh geometry including blend shapes; implicitly loads <code>Definition</code></td>
+</tr>
+<tr>
+<td><code>GeometryWithoutBlendShapes</code></td>
+<td><code>uint32_t = 16 \| Definition</code></td>
+<td>optional — mesh geometry without blend shapes; implicitly loads <code>Definition</code></td>
+</tr>
+<tr>
+<td><code>MachineLearnedBehavior</code></td>
+<td><code>uint32_t = 32 \| Definition</code></td>
+<td>optional — ML-driven behaviour layer; implicitly loads <code>Definition</code></td>
+</tr>
+<tr>
+<td><code>RBFBehavior</code></td>
+<td><code>uint32_t = 64 \| Behavior</code></td>
+<td>optional — RBF behaviour layer; implicitly loads <code>Behavior</code> (and thus <code>Definition</code>)</td>
+</tr>
+<tr>
+<td><code>JointBehaviorMetadata</code></td>
+<td><code>uint32_t = 128 \| Definition</code></td>
+<td>optional — per-joint behaviour metadata; implicitly loads <code>Definition</code></td>
+</tr>
+<tr>
+<td><code>TwistSwingBehavior</code></td>
+<td><code>uint32_t = 256 \| Definition</code></td>
+<td>optional — twist/swing constraint behaviour; implicitly loads <code>Definition</code></td>
+</tr>
+<tr>
+<td><code>All</code></td>
+<td><code>uint32_t</code></td>
+<td>optional — composite of <code>RBFBehavior</code>, <code>Geometry</code>, <code>MachineLearnedBehavior</code>, <code>JointBehaviorMetadata</code>, and <code>TwistSwingBehavior</code>; the default for <code>Configuration::layer</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_1">Construction</h3>
+<pre><code class="language-cpp">// Load only joint behaviour (implicitly includes Definition + Descriptor)
+dna::Configuration cfg;
+cfg.layer = dna::DataLayer::Behavior;
+
+// Load behaviour and geometry together via operator|
+cfg.layer = dna::DataLayer::Behavior | dna::DataLayer::Geometry;
+
+// Load everything (default)
+cfg.layer = dna::DataLayer::All;
+</code></pre>
+<h3 id="relationships_3">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — the <code>layer</code> field holds a <code>DataLayer</code> value</li>
+<li><code>UnknownLayerPolicy</code> — companion enum controlling what happens to unrecognised layer data</li>
+</ul>
+<h3 id="constraints_1">Constraints</h3>
+<ul>
+<li>Each enumerator encodes its own dependencies via bitwise OR; requesting a higher-level layer automatically satisfies lower-level requirements at the reader level.</li>
+<li><code>All</code> does not include <code>GeometryWithoutBlendShapes</code> — that value is mutually exclusive with <code>Geometry</code>.</li>
+</ul>
+<!-- ink:api-end name="DataLayer" -->
+
+<!-- ink:api name="Direction" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="direction"><code>Direction</code></h2>
+<p>Axis direction type from the TDM math library, aliased into the <code>dna</code> namespace.</p>
+<h3 id="why-this-exists_4">Why this exists</h3>
+<p><code>Direction</code> is <code>tdm::axis_dir</code> re-exported under <code>dna::</code> so client code configuring coordinate systems does not need to import TDM headers directly. It represents the signed direction of a single spatial axis (e.g., positive X, negative Y) and is used to build a <code>CoordinateSystem</code> frame.</p>
+<h3 id="relationships_4">Relationships</h3>
+<ul>
+<li><code>CoordinateSystem</code> (<code>tdm::coord_sys</code>) — composed from <code>Direction</code> values per axis</li>
+<li><code>Configuration</code> — <code>coordinateSystem</code> field accepts a <code>CoordinateSystem</code> built from <code>Direction</code> values</li>
+</ul>
+<!-- ink:api-end name="Direction" -->
+
+<!-- ink:api name="FaceWindingOrder" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="facewindingorder"><code>FaceWindingOrder</code></h2>
+<p>Declare the vertex winding convention for geometry faces — counter-clockwise (OpenGL/Maya) or clockwise (DirectX/left-handed).</p>
+<h3 id="why-this-exists_5">Why this exists</h3>
+<p>DNA geometry is authored with CCW winding (the cross product of consecutive face vertices points along the outward surface normal). Engines using a left-handed coordinate system (DirectX, Unreal by default) expect CW winding, and submitting CCW faces to them causes inverted normals and back-face culling errors. Setting <code>faceWindingOrder = FaceWindingOrder::cw</code> in <code>Configuration</code> together with <code>CoordinateSystemTransformPolicy::Transform</code> instructs the reader to reverse winding at load time so the rest of the pipeline sees correctly oriented faces.</p>
+<h3 id="fields_3">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ccw</code></td>
+<td><code>uint8_t = 0</code></td>
+<td>Counter-clockwise winding. Authored default; cross product of consecutive vertices agrees with stored normals.</td>
+</tr>
+<tr>
+<td><code>cw</code></td>
+<td><code>uint8_t = 1</code></td>
+<td>Clockwise winding. Left-handed / DirectX style; cross product opposes stored normals.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="constraints_2">Constraints</h3>
+<ul>
+<li>Winding conversion is applied only when <code>Configuration::coordinateSystemTransformPolicy</code> is <code>Transform</code>. Setting <code>faceWindingOrder</code> alone under <code>Preserve</code> policy has no effect.</li>
+</ul>
+<h3 id="relationships_5">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — set via the <code>faceWindingOrder</code> field</li>
+<li><code>CoordinateSystemTransformPolicy</code> — must be <code>Transform</code> for winding conversion to take effect</li>
+</ul>
+<!-- ink:api-end name="FaceWindingOrder" -->
+
+<!-- ink:api name="RotationDirection" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="rotationdirection"><code>RotationDirection</code></h2>
+<p>Per-axis rotation direction type from TDM, aliased into the <code>dna</code> namespace.</p>
+<h3 id="why-this-exists_6">Why this exists</h3>
+<p><code>RotationDirection</code> is <code>tdm::rot_dir</code> re-exported under <code>dna::</code> to avoid requiring TDM imports in user code. It encodes the sign of rotation for a single axis — <code>positive</code> (right-hand rule) or <code>negative</code> (left-hand / inverted). Three <code>RotationDirection</code> values compose <code>RotationSign</code>, which is held by <code>Configuration::rotationSign</code>.</p>
+<h3 id="relationships_6">Relationships</h3>
+<ul>
+<li><code>RotationSign</code> — three <code>RotationDirection</code> values (one per axis) form a <code>RotationSign</code></li>
+<li><code>Configuration</code> — <code>rotationSign</code> field uses this type</li>
+</ul>
+<!-- ink:api-end name="RotationDirection" -->
+
+<!-- ink:api name="RotationSequence" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="rotationsequence"><code>RotationSequence</code></h2>
+<p>Euler rotation application order (e.g., XYZ, ZYX), aliased from TDM into the <code>dna</code> namespace.</p>
+<h3 id="why-this-exists_7">Why this exists</h3>
+<p>Euler angle decomposition is order-dependent — the same three angles produce different orientations under XYZ vs ZYX ordering. <code>RotationSequence</code> makes the intended order explicit rather than leaving it as an undocumented convention. The default in <code>Configuration</code> is <code>RotationSequence::xyz</code>, matching common DCC tool convention.</p>
+<h3 id="relationships_7">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — set via <code>rotationSequence</code>; applied globally to all joint rotations during coordinate conversion</li>
+<li><code>RotationSign</code> — companion type controlling per-axis sign</li>
+</ul>
+<!-- ink:api-end name="RotationSequence" -->
+
+<!-- ink:api name="RotationSign" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="rotationsign"><code>RotationSign</code></h2>
+<p>Per-axis rotation sign aggregate from TDM, aliased into the <code>dna</code> namespace.</p>
+<h3 id="why-this-exists_8">Why this exists</h3>
+<p><code>RotationSign</code> is <code>tdm::rot_sign</code> re-exported under <code>dna::</code>. It bundles three <code>RotationDirection</code> values — one for each spatial axis — into a single object, making the handedness of each axis explicit rather than encoded in a sign-bit convention. The default in <code>Configuration</code> sets all axes to <code>RotationDirection::positive</code>.</p>
+<h3 id="construction_2">Construction</h3>
+<pre><code class="language-cpp">// Default: all axes positive (right-hand convention)
+dna::RotationSign sign = {dna::RotationDirection::positive,
+                          dna::RotationDirection::positive,
+                          dna::RotationDirection::positive};
+
+// Invert Y axis (common when converting to a left-handed Y-up frame)
+dna::RotationSign signInvertY = {dna::RotationDirection::positive,
+                                  dna::RotationDirection::negative,
+                                  dna::RotationDirection::positive};
+</code></pre>
+<h3 id="relationships_8">Relationships</h3>
+<ul>
+<li><code>RotationDirection</code> — the element type; three of these compose a <code>RotationSign</code></li>
+<li><code>Configuration</code> — held by <code>rotationSign</code>; applied during coordinate conversion</li>
+</ul>
+<!-- ink:api-end name="RotationSign" -->
+
+<!-- ink:api name="RotationUnit" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="rotationunit"><code>RotationUnit</code></h2>
+<p>Specify the unit for rotation data — degrees or radians.</p>
+<h3 id="fields_4">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>degrees</code></td>
+<td>Rotation expressed in degrees. Common in DCC tools and human-readable exports.</td>
+</tr>
+<tr>
+<td><code>radians</code></td>
+<td>Rotation expressed in radians. Common for real-time math libraries.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_9">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — paired with <code>rotationSequence</code> and <code>rotationSign</code> when <code>CoordinateSystemTransformPolicy::Transform</code> is active</li>
+</ul>
+<!-- ink:api-end name="RotationUnit" -->
+
+<!-- ink:api name="TranslationUnit" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="translationunit"><code>TranslationUnit</code></h2>
+<p>Specify the unit of measurement for positional data — centimetres or metres.</p>
+<h3 id="fields_5">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cm</code></td>
+<td>Centimetres. Common for DCC tools (Maya default scene unit).</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td>Metres. Common for real-time engines (Unreal default world unit).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_10">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — used alongside <code>CoordinateSystemTransformPolicy</code> when converting spatial data between DCC and engine conventions</li>
+</ul>
+<!-- ink:api-end name="TranslationUnit" -->
+
+<!-- ink:api name="UnknownLayerPolicy" module="dna/Configuration" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="unknownlayerpolicy"><code>UnknownLayerPolicy</code></h2>
+<p>Control whether unrecognised DNA layers are kept intact or silently dropped during load.</p>
+<h3 id="why-this-exists_9">Why this exists</h3>
+<p>DNA assets may contain layer data introduced by a newer writer than the reader understands. Silently discarding that data is safe for read-only inspection but catastrophic in a round-trip pipeline where the file is re-saved — it causes permanent data loss. <code>Preserve</code> (the default) prevents that by retaining opaque layer blobs verbatim. <code>Ignore</code> is the opt-in choice for pipelines that will never re-write the file and want a smaller in-memory footprint.</p>
+<h3 id="fields_6">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Preserve</code></td>
+<td>Keep all unrecognised layer data in memory unchanged. Use this in any pipeline that may re-save the DNA file.</td>
+</tr>
+<tr>
+<td><code>Ignore</code></td>
+<td>Discard unrecognised layer data on load. Safe only for read-only consumers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships_11">Relationships</h3>
+<ul>
+<li><code>Configuration</code> — set via the <code>unknownLayerPolicy</code> field</li>
+<li><code>DataLayer</code> — companion enum that selects which known layers to load</li>
+</ul>
+<!-- ink:api-end name="UnknownLayerPolicy" -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../BinaryStreamWriter/" class="btn btn-neutral float-left" title="BinaryStreamWriter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../JSONStreamReader/" class="btn btn-neutral float-right" title="JSONStreamReader">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../BinaryStreamWriter/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../JSONStreamReader/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

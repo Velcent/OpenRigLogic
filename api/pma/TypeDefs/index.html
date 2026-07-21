@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/pma/TypeDefs/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>TypeDefs - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "TypeDefs";
+        var mkdocs_page_input_path = "api/pma/TypeDefs.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/pma/TypeDefs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >arrayview</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/ArrayView/">ArrayView</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >dna</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamWriter/">JSONStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >pma</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">TypeDefs</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#pmalistt-allocator">pma::List&lt;T, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmamapk-v-allocator">pma::Map&lt;K, V, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_1">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_1">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_1">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_1">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmamatrixt-allocator">pma::Matrix&lt;T, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_2">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_2">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_2">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_2">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmasett-allocator">pma::Set&lt;T, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_3">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_3">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_3">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_3">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmastringt-allocator">pma::String&lt;T, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_4">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_4">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_4">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_4">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmaunorderedmapk-v-allocator">pma::UnorderedMap&lt;K, V, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_5">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_5">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_5">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_5">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmaunorderedsett-allocator">pma::UnorderedSet&lt;T, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_6">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_6">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_6">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_6">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pmavectort-allocator">pma::Vector&lt;T, Allocator&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_7">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_7">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction_7">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_7">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >tdm</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Mat/">Mat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Transforms/">Transforms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tdm/Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">pma</li>
+      <li class="breadcrumb-item active">TypeDefs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-pmatypedefs">API Reference — <code>pma/TypeDefs</code></h1>
+<hr />
+<!-- ink:api name="List" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmalistt-allocator"><code>pma::List&lt;T, Allocator&gt;</code></h2>
+<p>Allocator-aware doubly-linked list for the pma module, backed by <code>std::list</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists">Why this exists</h3>
+<p><code>std::list</code> allocates one node per element on the global heap, scattering lifetime control across independent allocations. This alias routes every node allocation through <code>PolyAllocator</code>, allowing the entire list to be freed by releasing the arena rather than deallocating nodes individually. Prefer <code>pma::Vector</code> when random access or cache locality matters; reach for <code>pma::List</code> when you need stable iterators after insertions and deletions.</p>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T</code></td>
+<td>template type parameter</td>
+<td>required — element type</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;T&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction">Construction</h3>
+<pre><code class="language-cpp">pma::List&lt;std::uint32_t&gt; jointIndices{allocator};
+jointIndices.push_back(0u);
+jointIndices.push_back(3u);
+</code></pre>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li><code>pma::Vector</code> — preferred alternative when random access or contiguous memory is needed</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+<li><code>std::list</code> — the underlying standard type this alias wraps</li>
+</ul>
+<!-- ink:api-end name="List" -->
+
+<!-- ink:api name="Map" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmamapk-v-allocator"><code>pma::Map&lt;K, V, Allocator&gt;</code></h2>
+<p>Allocator-aware ordered key-value map for the pma module, backed by <code>std::map</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists_1">Why this exists</h3>
+<p><code>std::map</code> allocates one tree node per key-value pair on the global heap. This alias routes those allocations through <code>PolyAllocator</code>, scoping the map's entire storage to a <code>pma</code> arena. Keys are ordered by <code>std::less&lt;K&gt;</code>, giving sorted iteration and logarithmic lookup. Use <code>pma::UnorderedMap</code> when insertion order and range iteration are irrelevant and O(1) lookup is preferred.</p>
+<h3 id="fields_1">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>K</code></td>
+<td>template type parameter</td>
+<td>required — key type; must satisfy <code>std::less&lt;K&gt;</code></td>
+</tr>
+<tr>
+<td><code>V</code></td>
+<td>template type parameter</td>
+<td>required — mapped value type</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;std::pair&lt;const K, V&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_1">Construction</h3>
+<pre><code class="language-cpp">pma::Map&lt;std::string, std::uint32_t&gt; jointIndexMap{allocator};
+jointIndexMap.emplace(&quot;spine_01&quot;, 0u);
+jointIndexMap.emplace(&quot;spine_02&quot;, 1u);
+auto idx = jointIndexMap.at(&quot;spine_01&quot;); // 0
+</code></pre>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li><code>pma::UnorderedMap</code> — hash-based alternative for O(1) average lookup when key order is irrelevant</li>
+<li><code>pma::Set</code> — key-only ordered companion type</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+<li><code>std::map</code> — the underlying standard type this alias wraps</li>
+</ul>
+<!-- ink:api-end name="Map" -->
+
+<!-- ink:api name="Matrix" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmamatrixt-allocator"><code>pma::Matrix&lt;T, Allocator&gt;</code></h2>
+<p>Two-dimensional dynamic array (vector of vectors) for the pma module, with <code>PolyAllocator</code> at both nesting levels.</p>
+<h3 id="why-this-exists_2">Why this exists</h3>
+<p>A raw <code>std::vector&lt;std::vector&lt;T&gt;&gt;</code> uses two independent global-heap allocations per row — the outer vector and each inner vector — making it impossible to scope them to a single arena. <code>pma::Matrix</code> nests <code>pma::Vector&lt;T&gt;</code> inside <code>pma::Vector&lt;pma::Vector&lt;T&gt;&gt;</code>, so both levels use <code>PolyAllocator</code> and the entire 2D structure participates in the same memory lifetime. Use this for weight tables, blend-shape matrices, and joint influence grids where all rows must be freed together.</p>
+<h3 id="fields_2">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T</code></td>
+<td>template type parameter</td>
+<td>required — element type of the inner rows</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;Vector&lt;T&gt;&gt;</code>; controls the outer container's allocator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_2">Construction</h3>
+<pre><code class="language-cpp">// A 3-row weight matrix, each row pre-reserved
+pma::Matrix&lt;float&gt; weights{allocator};
+weights.resize(3);
+for (auto&amp; row : weights) {
+    row.reserve(64);
+}
+</code></pre>
+<h3 id="relationships_2">Relationships</h3>
+<ul>
+<li><code>pma::Vector</code> — the alias used for both the outer container and each inner row</li>
+<li><code>pma::PolyAllocator</code> — the default allocator for both nesting levels</li>
+</ul>
+<!-- ink:api-end name="Matrix" -->
+
+<!-- ink:api name="Set" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmasett-allocator"><code>pma::Set&lt;T, Allocator&gt;</code></h2>
+<p>Allocator-aware ordered set for the pma module, backed by <code>std::set</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists_3">Why this exists</h3>
+<p><code>std::set</code> allocates tree nodes on the global heap, making it impossible to scope them to a <code>pma</code> arena without an explicit allocator. This alias routes every node through <code>PolyAllocator</code>, so the set's lifetime and memory budget are controlled by the arena. Elements are sorted using <code>std::less&lt;T&gt;</code> — use <code>pma::UnorderedSet</code> when order does not matter and O(1) lookup is preferred.</p>
+<h3 id="fields_3">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T</code></td>
+<td>template type parameter</td>
+<td>required — element type; must satisfy <code>std::less&lt;T&gt;</code> (strict-weak ordering)</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;T&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_3">Construction</h3>
+<pre><code class="language-cpp">pma::Set&lt;std::string&gt; controlNames{allocator};
+controlNames.insert(&quot;jawOpen&quot;);
+controlNames.insert(&quot;eyeBlinkLeft&quot;);
+</code></pre>
+<h3 id="relationships_3">Relationships</h3>
+<ul>
+<li><code>pma::UnorderedSet</code> — hash-based alternative for O(1) lookup when order is irrelevant</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+<li><code>std::set</code> — the underlying standard type this alias wraps</li>
+</ul>
+<!-- ink:api-end name="Set" -->
+
+<!-- ink:api name="String" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmastringt-allocator"><code>pma::String&lt;T, Allocator&gt;</code></h2>
+<p>Allocator-aware string type for the pma module, backed by <code>std::basic_string</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists_4">Why this exists</h3>
+<p>Using raw <code>std::string</code> bypasses the <code>pma</code> memory model entirely. This alias makes any character string in the <code>pma</code> namespace automatically use <code>PolyAllocator</code>, which supports arena allocation, memory tracking, and custom memory strategies without changing call-site code. Swap in a different allocator by providing the second template parameter; the string interface stays identical.</p>
+<h3 id="fields_4">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T</code></td>
+<td>template type parameter</td>
+<td>required — character type (e.g. <code>char</code>, <code>wchar_t</code>)</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;T&gt;</code>; supply a custom allocator to override arena strategy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_4">Construction</h3>
+<pre><code class="language-cpp">// Construct with an explicit allocator
+pma::String&lt;char&gt; name{&quot;RigLogic&quot;, allocator};
+
+// Default-allocator construction
+pma::String&lt;char&gt; label = &quot;joint_01&quot;;
+</code></pre>
+<h3 id="relationships_4">Relationships</h3>
+<ul>
+<li><code>pma::Vector</code> — companion sequence container using the same PolyAllocator convention</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+<li><code>std::basic_string</code> — the underlying standard type this alias wraps</li>
+</ul>
+<!-- ink:api-end name="String" -->
+
+<!-- ink:api name="UnorderedMap" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmaunorderedmapk-v-allocator"><code>pma::UnorderedMap&lt;K, V, Allocator&gt;</code></h2>
+<p>Allocator-aware hash map for the pma module, backed by <code>std::unordered_map</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists_5">Why this exists</h3>
+<p><code>std::unordered_map</code> scatters bucket arrays and node storage across the global heap, making arena-scoped cleanup expensive. This alias injects <code>PolyAllocator</code> so the entire map — hash buckets and key-value node storage — is tracked and freed through the <code>pma</code> memory model. Choose this over <code>pma::Map</code> when you need O(1) average-case lookup and do not require sorted key iteration.</p>
+<h3 id="fields_5">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>K</code></td>
+<td>template type parameter</td>
+<td>required — key type; must support <code>std::hash&lt;K&gt;</code> and <code>std::equal_to&lt;K&gt;</code></td>
+</tr>
+<tr>
+<td><code>V</code></td>
+<td>template type parameter</td>
+<td>required — mapped value type</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;std::pair&lt;const K, V&gt;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_5">Construction</h3>
+<pre><code class="language-cpp">pma::UnorderedMap&lt;std::string, float&gt; blendWeights{allocator};
+blendWeights.emplace(&quot;jawOpen&quot;, 0.75f);
+blendWeights.emplace(&quot;eyeBlinkLeft&quot;, 0.0f);
+float w = blendWeights.at(&quot;jawOpen&quot;); // 0.75
+</code></pre>
+<h3 id="relationships_5">Relationships</h3>
+<ul>
+<li><code>pma::Map</code> — ordered alternative when sorted key iteration or range queries are needed</li>
+<li><code>pma::UnorderedSet</code> — key-only hash-based companion type</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+<li><code>std::unordered_map</code> — the underlying standard type this alias wraps</li>
+</ul>
+<!-- ink:api-end name="UnorderedMap" -->
+
+<!-- ink:api name="UnorderedSet" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmaunorderedsett-allocator"><code>pma::UnorderedSet&lt;T, Allocator&gt;</code></h2>
+<p>Allocator-aware hash set for the pma module, backed by <code>std::unordered_set</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists_6">Why this exists</h3>
+<p><code>std::unordered_set</code> allocates bucket arrays and node storage on the global heap. This alias injects <code>PolyAllocator</code> so the entire structure — buckets and nodes — is managed through the <code>pma</code> memory model. Use this over <code>pma::Set</code> when element order is irrelevant and you need O(1) average-case lookup, insertion, and removal.</p>
+<h3 id="fields_6">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T</code></td>
+<td>template type parameter</td>
+<td>required — element type; must be hashable via <code>std::hash&lt;T&gt;</code> and equality-comparable via <code>std::equal_to&lt;T&gt;</code></td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;T&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_6">Construction</h3>
+<pre><code class="language-cpp">pma::UnorderedSet&lt;std::uint16_t&gt; visitedJoints{allocator};
+visitedJoints.insert(7u);
+visitedJoints.insert(12u);
+bool alreadySeen = visitedJoints.count(7u) &gt; 0;
+</code></pre>
+<h3 id="relationships_6">Relationships</h3>
+<ul>
+<li><code>pma::Set</code> — ordered alternative when sorted iteration or <code>std::less</code> comparison is required</li>
+<li><code>pma::UnorderedMap</code> — key-value companion using the same hash-based strategy</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+</ul>
+<!-- ink:api-end name="UnorderedSet" -->
+
+<!-- ink:api name="Vector" module="pma/TypeDefs" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="pmavectort-allocator"><code>pma::Vector&lt;T, Allocator&gt;</code></h2>
+<p>Allocator-aware dynamic array for the pma module, backed by <code>std::vector</code> with <code>PolyAllocator</code> by default.</p>
+<h3 id="why-this-exists_7">Why this exists</h3>
+<p>Standard <code>std::vector</code> uses the global heap allocator unless explicitly parameterized. This alias injects <code>PolyAllocator</code> so every dynamic array in <code>pma</code> participates in the module's memory model — enabling arena allocation, lifetime scoping, and memory budget tracking with no call-site changes. It is also the building block for <code>pma::Matrix</code>, which layers a second vector over this alias.</p>
+<h3 id="fields_7">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T</code></td>
+<td>template type parameter</td>
+<td>required — element type</td>
+</tr>
+<tr>
+<td><code>Allocator</code></td>
+<td>template type parameter</td>
+<td>optional — defaults to <code>PolyAllocator&lt;T&gt;</code>; override to use a different arena or tracking strategy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction_7">Construction</h3>
+<pre><code class="language-cpp">pma::Vector&lt;float&gt; weights{allocator};
+weights.reserve(256);
+weights.push_back(1.0f);
+</code></pre>
+<h3 id="relationships_7">Relationships</h3>
+<ul>
+<li><code>pma::Matrix</code> — 2D container built as <code>Vector&lt;Vector&lt;T&gt;&gt;</code> using this alias</li>
+<li><code>pma::PolyAllocator</code> — the default allocator injected by this alias</li>
+<li><code>pma::String</code> — sibling alias using the same PolyAllocator convention</li>
+<li><code>std::vector</code> — the underlying standard type this alias wraps</li>
+</ul>
+<!-- ink:api-end name="Vector" -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ScopedPtr/" class="btn btn-neutral float-left" title="ScopedPtr"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../resources/AlignedMemoryResource/" class="btn btn-neutral float-right" title="AlignedMemoryResource">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ScopedPtr/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../resources/AlignedMemoryResource/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

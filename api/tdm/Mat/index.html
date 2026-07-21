@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://epicgames.github.io/OpenRigLogic/api/tdm/Mat/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Mat - OpenRigLogic</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Mat";
+        var mkdocs_page_input_path = "api/tdm/Mat.md";
+        var mkdocs_page_url = "/OpenRigLogic/api/tdm/Mat/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> OpenRigLogic
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../release_notes/">Release Notes</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >arrayview</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/ArrayView/">ArrayView</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../arrayview/StringView/">StringView</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >dna</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamReader/">BinaryStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/BinaryStreamWriter/">BinaryStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamReader/">JSONStreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/JSONStreamWriter/">JSONStreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Reader/">Reader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamReader/">StreamReader</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/StreamWriter/">StreamWriter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../dna/Writer/">Writer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >layers</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorReader/">BehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/BehaviorWriter/">BehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionReader/">DefinitionReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DefinitionWriter/">DefinitionWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Descriptor/">Descriptor</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorReader/">DescriptorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/DescriptorWriter/">DescriptorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Geometry/">Geometry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryReader/">GeometryReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/GeometryWriter/">GeometryWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderReader/">HeaderReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/HeaderWriter/">HeaderWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadata/">JointBehaviorMetadata</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataReader/">JointBehaviorMetadataReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/JointBehaviorMetadataWriter/">JointBehaviorMetadataWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehavior/">MachineLearnedBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExt/">MachineLearnedBehaviorExt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtReader/">MachineLearnedBehaviorExtReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorExtWriter/">MachineLearnedBehaviorExtWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorReader/">MachineLearnedBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/MachineLearnedBehaviorWriter/">MachineLearnedBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehavior/">RBFBehavior</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorReader/">RBFBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/RBFBehaviorWriter/">RBFBehaviorWriter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/Twist/">Twist</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorReader/">TwistSwingBehaviorReader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/layers/TwistSwingBehaviorWriter/">TwistSwingBehaviorWriter</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/types/Vector3/">Vector3</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../dna/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >pma</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/MemoryResource/">MemoryResource</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/PolyAllocator/">PolyAllocator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/ScopedPtr/">ScopedPtr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../pma/TypeDefs/">TypeDefs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >resources</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/AlignedMemoryResource/">AlignedMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/ArenaMemoryResource/">ArenaMemoryResource</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/resources/DefaultMemoryResource/">DefaultMemoryResource</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../pma/utils/ManagedInstance/">ManagedInstance</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >riglogic</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigInstance/">RigInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/RigLogic/">RigLogic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../riglogic/riglogic/Stats/">Stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/types/Aliases/">Aliases</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >version</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../riglogic/version/VersionInfo/">VersionInfo</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >status</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Provider/">Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/Status/">Status</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../status/StatusCode/">StatusCode</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >tdm</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ang/">Ang</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Computations/">Computations</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CoordSys/">CoordSys</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Mat</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#matr-c-t-appliedconst-matr-c-t-lhs-f-func">mat&lt;R, C, T&gt; applied(const mat&lt;R, C, T&gt;&amp; lhs, F func)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matr-c-tcolumn_type">mat&lt;R, C, T&gt;::column_type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matn-n-t-inverseconst-matn-n-t-m">mat&lt;N, N, T&gt; inverse(const mat&lt;N, N, T&gt;&amp; m)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_1">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_1">Returns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints">Constraints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#is_all_scalart-us">is_all_scalar&lt;T, Us...&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_1">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints_1">Constraints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matr-c-t">mat&lt;R, C, T&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_2">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields_1">Fields</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#construction">Construction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_1">Relationships</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constraints_2">Constraints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matr-c-trow_type">mat&lt;R, C, T&gt;::row_type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_3">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_2">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matc-r-t-transposeconst-matr-c-t-m">mat&lt;C, R, T&gt; transpose(const mat&lt;R, C, T&gt;&amp; m)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-this_2">When to use this</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#returns_2">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matr-c-tvalue_type">mat&lt;R, C, T&gt;::value_type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-this-exists_4">Why this exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relationships_3">Relationships</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Quat/">Quat</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Transforms/">Transforms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Types/">Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Vec/">Vec</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >trio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Concepts/">Concepts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../trio/Stream/">Stream</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >streams</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/FileStream/">FileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryMappedFileStream/">MemoryMappedFileStream</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/streams/MemoryStream/">MemoryStream</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >types</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/types/Parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >utils</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../trio/utils/StreamScope/">StreamScope</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">OpenRigLogic</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Reference</li>
+          <li class="breadcrumb-item">tdm</li>
+      <li class="breadcrumb-item active">Mat</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference-tdmmat">API Reference — <code>tdm/Mat</code></h1>
+<hr />
+<!-- ink:api name="applied" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="matr-c-t-appliedconst-matr-c-t-lhs-f-func"><code>mat&lt;R, C, T&gt; applied(const mat&lt;R, C, T&gt;&amp; lhs, F func)</code></h2>
+<p>Apply a functor to every row of a matrix and return the modified copy, leaving the original unchanged.</p>
+<h3 id="when-to-use-this">When to use this</h3>
+<p>Use when you need a functional-style transform over a matrix's rows without mutating the source. <code>applied</code> is the non-mutating counterpart to <code>mat::apply</code> — reach for it in expressions and pipelines where you want a new matrix value rather than in-place modification of an existing one.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-cpp">// Negate every row of a 3×3 matrix
+tdm::mat&lt;3, 3, float&gt; src = tdm::mat&lt;3, 3, float&gt;::diagonal(1.0f);
+tdm::mat&lt;3, 3, float&gt; negated = tdm::applied(src, [](tdm::vec&lt;3, float&gt;&amp; row, tdm::dim_t /*i*/) {
+    row = row * -1.0f;
+});
+// src is unchanged; negated has all elements negated
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lhs</code></td>
+<td><code>const mat&lt;R, C, T&gt;&amp;</code></td>
+<td>required — the source matrix to copy and transform.</td>
+</tr>
+<tr>
+<td><code>func</code></td>
+<td><code>F</code></td>
+<td>required — a callable with signature <code>void(row_type&amp;, dim_t row_index)</code> applied to each row in order.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns">Returns</h3>
+<p><code>mat&lt;R, C, T&gt;</code> — a new matrix that is a copy of <code>lhs</code> with <code>func</code> applied to each row.</p>
+<!-- ink:api-end name="applied" -->
+
+<!-- ink:api name="column_type" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="matr-c-tcolumn_type"><code>mat&lt;R, C, T&gt;::column_type</code></h2>
+<p>Type alias for a single column of a <code>mat&lt;R, C, T&gt;</code> matrix — a <code>vec&lt;R, T&gt;</code> vector with R elements.</p>
+<h3 id="why-this-exists">Why this exists</h3>
+<p>Names the column vector type with R components, which is distinct from <code>row_type</code> in non-square matrices. The <code>rows()</code> static method returns <code>column_type::dimensions()</code> (R), making explicit that the row count equals the column vector height. Generic code receiving a column vector from matrix operations can use this alias to determine the expected type without inspecting the R template parameter directly.</p>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li><code>row_type</code> — <code>vec&lt;C, value_type&gt;</code>: the corresponding row vector type.</li>
+<li><code>from_columns</code> — factory method that takes <code>C</code> arguments of this type.</li>
+</ul>
+<!-- ink:api-end name="column_type" -->
+
+<!-- ink:api name="inverse" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="matn-n-t-inverseconst-matn-n-t-m"><code>mat&lt;N, N, T&gt; inverse(const mat&lt;N, N, T&gt;&amp; m)</code></h2>
+<p>Compute the inverse of a square matrix — the matrix M⁻¹ such that M × M⁻¹ = I.</p>
+<h3 id="when-to-use-this_1">When to use this</h3>
+<p>Use when you need to reverse a transformation: undo a world-to-camera transform, solve a linear system, or recover original coordinates from a transformed space. For orthogonal matrices (rotation-only, no scale), prefer <code>transpose</code> — it produces the same result with no division and no risk of numerical instability.</p>
+<h3 id="example_1">Example</h3>
+<pre><code class="language-cpp">// Invert a 4×4 transform matrix
+tdm::mat&lt;4, 4, float&gt; world_to_camera = /* camera transform */;
+tdm::mat&lt;4, 4, float&gt; camera_to_world = tdm::inverse(world_to_camera);
+// Apply camera_to_world to bring a camera-space point back to world space
+</code></pre>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>m</code></td>
+<td><code>const mat&lt;N, N, T&gt;&amp;</code></td>
+<td>required — the square matrix to invert. Must be N×N (enforced by template).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_1">Returns</h3>
+<p><code>mat&lt;N, N, T&gt;</code> — the matrix inverse of the input.</p>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li>Only callable on square matrices (<code>N×N</code>). Rectangular matrices do not have an overload — the template parameter forces this at compile time.</li>
+<li>Behavior is undefined (or numerically degenerate) for singular matrices (determinant = 0). Check invertibility with a determinant check before calling if the input is not guaranteed to be non-singular.</li>
+</ul>
+<!-- ink:api-end name="inverse" -->
+
+<!-- ink:api name="is_all_scalar" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="is_all_scalart-us"><code>is_all_scalar&lt;T, Us...&gt;</code></h2>
+<p>Internal trait that checks whether every type in a variadic parameter pack is a scalar type. Lives in <code>tdm::impl</code> — not part of the public API surface.</p>
+<h3 id="why-this-exists_1">Why this exists</h3>
+<p>The <code>mat</code> constructors need a compile-time guard that permits variadic scalar packs (e.g., <code>mat(1.0f, 0.0f, 0.0f, …)</code>) only when all arguments share the same scalar type. A plain <code>std::is_scalar</code> check cannot span a heterogeneous pack, so this recursive trait accumulates the check across all types in the pack before enabling the constructor via <code>std::enable_if</code>.</p>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(base)</td>
+<td><code>std::true_type</code> or <code>std::false_type</code></td>
+<td>Inherits <code>true_type</code> when all types in the pack are scalar and homogeneous; <code>false_type</code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="constraints_1">Constraints</h3>
+<ul>
+<li>Resides in <code>tdm::impl</code> — treat as internal. Do not specialize or depend on it directly.</li>
+<li>Empty pack specialization (<code>is_all_scalar&lt;&gt;</code>) always yields <code>false_type</code> — zero arguments are not considered all-scalar.</li>
+</ul>
+<!-- ink:api-end name="is_all_scalar" -->
+
+<!-- ink:api name="mat" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="matr-c-t"><code>mat&lt;R, C, T&gt;</code></h2>
+<p>A fixed-size R×C matrix of scalar type T with full construction, factory, and arithmetic support.</p>
+<h3 id="why-this-exists_2">Why this exists</h3>
+<p><code>mat&lt;R, C, T&gt;</code> encodes matrix dimensions as compile-time template parameters, eliminating entire classes of shape-mismatch bugs that a runtime matrix type cannot catch. The template structure ensures that <code>transpose</code>, <code>inverse</code>, and multiplication are only callable when dimensions are compatible — the compiler rejects invalid operations before the program runs. This is the primary linear-algebra primitive in the <code>tdm</code> library; <code>vec&lt;N, T&gt;</code> is a specialization of its row and column types.</p>
+<h3 id="fields_1">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value_type</code></td>
+<td><code>T</code></td>
+<td>The scalar element type.</td>
+</tr>
+<tr>
+<td><code>row_type</code></td>
+<td><code>vec&lt;C, T&gt;</code></td>
+<td>Type of a single row (a C-dimensional vector).</td>
+</tr>
+<tr>
+<td><code>column_type</code></td>
+<td><code>vec&lt;R, T&gt;</code></td>
+<td>Type of a single column (an R-dimensional vector).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="construction">Construction</h3>
+<pre><code class="language-cpp">// Zero-initialize a 3×3 float matrix
+tdm::mat&lt;3, 3, float&gt; identity{};
+
+// Fill all elements with a scalar
+tdm::mat&lt;3, 3, float&gt; scaled(2.0f);
+
+// Element-by-element (row-major order)
+tdm::mat&lt;2, 2, float&gt; m(1.0f, 0.0f,
+                         0.0f, 1.0f);
+
+// From row vectors
+auto rot = tdm::mat&lt;3, 3, float&gt;::from_rows(
+    tdm::vec&lt;3, float&gt;{1.0f, 0.0f, 0.0f},
+    tdm::vec&lt;3, float&gt;{0.0f, 0.866f, -0.5f},
+    tdm::vec&lt;3, float&gt;{0.0f, 0.5f,  0.866f}
+);
+
+// From column vectors
+auto basis = tdm::mat&lt;3, 3, float&gt;::from_columns(xAxis, yAxis, zAxis);
+
+// Diagonal (square matrices only)
+auto uniform_scale = tdm::mat&lt;4, 4, float&gt;::diagonal(2.0f);
+</code></pre>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li><code>vec&lt;N, T&gt;</code> — row and column element type; <code>row_type</code> and <code>column_type</code> are both <code>vec</code> instances.</li>
+<li><code>transpose</code> — free function that produces <code>mat&lt;C, R, T&gt;</code> from <code>mat&lt;R, C, T&gt;</code>.</li>
+<li><code>inverse</code> — free function for square matrix inversion.</li>
+<li><code>applied</code> — free function that applies a functor to a copy of the matrix.</li>
+</ul>
+<h3 id="constraints_2">Constraints</h3>
+<ul>
+<li><code>diagonal()</code> and <code>inverse()</code> are only available for square matrices (<code>R == C</code>). The compiler enforces this via <code>std::enable_if&lt;H == W&gt;</code>.</li>
+<li>The variadic scalar constructor requires exactly <code>R * C</code> arguments all of the same scalar type. Passing the wrong count or mixed types is a compile error.</li>
+</ul>
+<!-- ink:api-end name="mat" -->
+
+<!-- ink:api name="row_type" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="matr-c-trow_type"><code>mat&lt;R, C, T&gt;::row_type</code></h2>
+<p>Type alias for a single row of a <code>mat&lt;R, C, T&gt;</code> matrix — a <code>vec&lt;C, T&gt;</code> vector with C elements.</p>
+<h3 id="why-this-exists_3">Why this exists</h3>
+<p>Names the concrete row vector type so that generic algorithms and <code>from_rows</code> factory callers can construct row arguments at the correct width without repeating the column dimension. The internal <code>values[R]</code> storage array is an array of <code>row_type</code>, so iterating rows operates directly on this type.</p>
+<h3 id="relationships_2">Relationships</h3>
+<ul>
+<li><code>column_type</code> — <code>vec&lt;R, value_type&gt;</code>: the corresponding column vector type.</li>
+<li><code>from_rows</code> — factory method that takes <code>R</code> arguments of this type.</li>
+</ul>
+<!-- ink:api-end name="row_type" -->
+
+<!-- ink:api name="transpose" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="callable" -->
+
+<h2 id="matc-r-t-transposeconst-matr-c-t-m"><code>mat&lt;C, R, T&gt; transpose(const mat&lt;R, C, T&gt;&amp; m)</code></h2>
+<p>Produce the transpose of a matrix — swap rows and columns to get a <code>mat&lt;C, R, T&gt;</code> from a <code>mat&lt;R, C, T&gt;</code> input.</p>
+<h3 id="when-to-use-this_2">When to use this</h3>
+<p>Use when you need to convert between row-major and column-major representations, solve a system Aᵀx = b, or construct a matrix from column vectors using <code>from_columns</code> (which calls <code>transpose</code> internally). For square matrices, <code>transpose</code> also undoes the effect of <code>inverse</code> for orthogonal matrices without the cost of a full inversion.</p>
+<h3 id="example_2">Example</h3>
+<pre><code class="language-cpp">// Transpose a 3×2 matrix to get a 2×3 result
+tdm::mat&lt;3, 2, float&gt; m = tdm::mat&lt;3, 2, float&gt;::from_rows(
+    tdm::vec&lt;2, float&gt;{1.0f, 2.0f},
+    tdm::vec&lt;2, float&gt;{3.0f, 4.0f},
+    tdm::vec&lt;2, float&gt;{5.0f, 6.0f}
+);
+tdm::mat&lt;2, 3, float&gt; mt = tdm::transpose(m);
+// mt rows are now: {1, 3, 5} and {2, 4, 6}
+</code></pre>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>m</code></td>
+<td><code>const mat&lt;R, C, T&gt;&amp;</code></td>
+<td>required — the source matrix to transpose.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="returns_2">Returns</h3>
+<p><code>mat&lt;C, R, T&gt;</code> — a new matrix whose row <code>i</code> equals column <code>i</code> of the input.</p>
+<!-- ink:api-end name="transpose" -->
+
+<!-- ink:api name="value_type" module="tdm/Mat" last_commit="api_scan" confidence="__CONFIDENCE__" updated="2026-06-10" api_kind="data_shape" -->
+
+<h2 id="matr-c-tvalue_type"><code>mat&lt;R, C, T&gt;::value_type</code></h2>
+<p>Type alias for the scalar element type <code>T</code> of a <code>mat&lt;R, C, T&gt;</code> matrix.</p>
+<h3 id="why-this-exists_4">Why this exists</h3>
+<p>Follows the C++ standard container convention so that generic code can write <code>typename Mat::value_type</code> to recover the element type without knowing the concrete instantiation. This enables template utilities to operate uniformly on <code>mat</code>, <code>vec</code>, and standard containers.</p>
+<h3 id="relationships_3">Relationships</h3>
+<ul>
+<li><code>row_type</code> — <code>vec&lt;C, value_type&gt;</code>: each row stores elements of this type.</li>
+<li><code>column_type</code> — <code>vec&lt;R, value_type&gt;</code>: each column stores elements of this type.</li>
+</ul>
+<!-- ink:api-end name="value_type" -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../CoordSys/" class="btn btn-neutral float-left" title="CoordSys"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Quat/" class="btn btn-neutral float-right" title="Quat">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../CoordSys/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Quat/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
